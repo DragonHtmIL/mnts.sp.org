@@ -1,9 +1,10 @@
 var GHPATH = '/mnts.sp.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '0.0.2-v2';
+var VERSION = '0.0.3-v2';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
+
   `${GHPATH}/index_data`,
 
   `${GHPATH}/index_data/textures/system_logo.png`,
@@ -13,7 +14,6 @@ var URLS = [
   `${GHPATH}/index_data/scripts/change_theme.js`,
   `${GHPATH}/index_data/scripts/detect_theme_scheme.js`,
   `${GHPATH}/index_data/scripts/favicon.js`,
-  `${GHPATH}/index_data/scripts/language_text.js`,
   `${GHPATH}/index_data/scripts/player_image.js`,
   `${GHPATH}/index_data/scripts/player_video.js`,
   `${GHPATH}/index_data/scripts/stick_header.js`,
@@ -40,6 +40,8 @@ var URLS = [
 
   `${GHPATH}/index_data/themes/system/textures/light`,
   `${GHPATH}/index_data/themes/system/textures/light/auds_remove.png`,
+  `${GHPATH}/index_data/themes/system/textures/light/close_0.png`,
+  `${GHPATH}/index_data/themes/system/textures/light/close_1.png`,
   `${GHPATH}/index_data/themes/system/textures/light/docs_remov.png`,
   `${GHPATH}/index_data/themes/system/textures/light/icon.png`,
   `${GHPATH}/index_data/themes/system/textures/light/imgs_remove.png`,
@@ -53,6 +55,8 @@ var URLS = [
 
   `${GHPATH}/index_data/themes/system/textures/dark`,
   `${GHPATH}/index_data/themes/system/textures/dark/auds_remove.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/close_0.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/close_1.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/docs_remov.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/icon.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/imgs_remove.png`,

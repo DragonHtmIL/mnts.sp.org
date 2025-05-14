@@ -32,7 +32,14 @@
       <div id="headerLogo" class="light"></div>
       <div id="titleHeader">...</div>
 
-      <div class="open-menu-button"></div>
+      <div class="open-menu-button" onclick="document.getElementById('menu').style.right='-0%';"></div>
+  </div>
+  <div id="menu">
+    <span id="closeMenu" onclick="document.getElementById('menu').style.right='-100%';"></span>
+    <h1 id="menuTitle">...</h1>
+    <div id="menuContent">
+      <div class="categore" id="settingsLang">...</div>
+    </div>
   </div>
   <div id="tabsContiner">
     <button onclick="openPlayer(event, 'videoContiner');" class="player-tab videoLang" id="videoPlayer">...</button>
@@ -67,6 +74,7 @@
   <script src="index_data/scripts/tabs.js"></script>
   <script src="index_data/scripts/system_battery.js"></script>
   <script src="index_data/scripts/system_clock.js"></script>
+  <script src="index_data/themes/system/languages/calendar.js" id="calendarLangLoad">//<!--Customable--></script>
   <script src="index_data/scripts/system_clendar.js"></script>
   <script src="index_data/scripts/auto_set_local.js"></script>
   <script src="index_data/scripts/stick_header.js"></script>
@@ -76,7 +84,7 @@
   <script src="index_data/scripts/detect_theme_scheme.js"></script>
   <script src="index_data/scripts/switch_theme.js"></script>
   <script src="index_data/scripts/change_theme.js"></script>
-  <script src="index_data/scripts/language_text.js" id="languageLoad"></script>
+  <script src="index_data/themes/system/languages/language_text.js" id="languageLoad">//<!--Customable--></script>
   <script src="index_data/scripts/window_load.js"></script>
   <script src="index_data/scripts/window_scroll.js"></script>
   <script>
