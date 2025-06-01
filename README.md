@@ -1,4 +1,4 @@
-<h3><a href="https://dragonhtmil.github.io/mnts.smc.org/">Open the game</a></h3>
+<h3><a href="https://dragonhtmil.github.io/mnts.sp.org/">Open the game</a></h3>
 There is a player of videos, images, audios and documents.<br>
 MNTS make this miniapp by coding in 30minutes up to 1-2 hourse through <a href="https://code.visualstudio.com">Visual Studio Code</a>.
 <hr>
