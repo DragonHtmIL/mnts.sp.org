@@ -34,7 +34,7 @@ function loadTextures() {
     casset.style.height = "1px";
     casset.style.opacity = "0";
     casset.addEventListener("load", function() {
-      widthcont = widthcont + 6.666666666666667;
+      widthcont = widthcont + 6.25;
       document.getElementById('widther').style.width = widthcont + "%";
       document.getElementById('widthernum').innerHTML = loadedcont++;
       toDisplayBlock();
