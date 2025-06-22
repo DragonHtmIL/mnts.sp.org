@@ -1,17 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IP</title>
-  <style>
-  #message {
-    color: red;
-    margin-top: 5px;
-  }
-  </style>
+  <meta name="theme-color" content="#f5f5f5">
+  <title>...</title>
+  <link rel="canonical" href="https://arturvesta.github.io/StoragePlayer/">
+  <link rel="manifest" href="" id="manifestTestLoad">
+  <link rel="stylesheet" href="index_data/styles/system_loading_style.css">
+  <link rel="stylesheet" id="styleRoot">
+  <link rel="stylesheet" id="styleBase">
+  <link rel="stylesheet" id="styleCreated">
 </head>
 <body>
-  <p id="message">The "Storage Player" currently in decoding progress.</p>
+  <div id="topspace"></div>
+  <div id="header">
+    <div class="device-info-indicator">
+        <div id="batteryProgress">
+          <div id="inBatteryProgress"></div>
+        </div>
+        <div id="dateTimeIndicator">
+          <div id="clock">...</div>
+          <div id="calendar">...</div>
+        </div>
+        <div id="batteryIndicator">
+          <div id="batteryLevel">...</div>
+          <div id="batteryCharge">...</div>
+        </div>
+      </div>
+      <div id="headerLogo" class="light"></div>
+      <div id="titleHeader">...</div>
+
+      <div class="open-menu-button" onclick="document.getElementById('menu').style.right='-0%';"></div>
+  </div>
+  <div id="menu">
+    <span id="closeMenu" onclick="document.getElementById('menu').style.right='-100%';"></span>
+    <h1 id="menuTitle">...</h1>
+    <div id="menuContent">
+      <div class="categore" id="settingsLang">...</div>
+      <div class="setting-content" id="cThemeLocal">
+        <label for="themeLocator" id="ctTextLang">...</label>
+        <input type="text" id="themeLocator" value="index_data/themes/system">
+        <button id="cTcheck">...</button>
+        <p id="cTmessage"></p>
+      </div>
+    </div>
+    <button id="applySettings">...</button>
+  </div>
+  <div id="tabsContiner">
+    <button onclick="openPlayer(event, 'videoContiner');" class="player-tab videoLang" id="videoPlayer">...</button>
+    <button onclick="openPlayer(event, 'imageContiner');" class="player-tab imageLang" id="imagePlayer">...</button>
+    <button onclick="openPlayer(event, 'audioContiner');" class="player-tab audioLang" id="audioPlayer">...</button>
+    <button onclick="openPlayer(event, 'documentContiner');" class="player-tab documentLang" id="documentPlayer">...</button>
+  </div>
+  <div id="videoContiner" class="player-content">
+    <h1 class="player-title videoLang">...</h1>
+    <input type="file" id="inputVideos" name="videosUploader" accept="video/*" onclick="clearVideoUploader();" multiple>
+    <button class="sub-input-file" onclick="document.getElementById('inputVideos').click();" id="upVidLang">...</button>
+    <div class="uploaded-continer" id="videosContiner"></div>
+  </div>
+  <div id="imageContiner" class="player-content">
+    <h1 class="player-title imageLang">...</h1>
+    <input type="file" id="inputImages" name="imagesUploader" accept="image/*" onclick="clearImageUploader();" multiple>
+    <button class="sub-input-file" onclick="document.getElementById('inputImages').click();" id="upImgLang">...</button>
+    <div class="uploaded-continer" id="imagesContiner"></div>
+  </div>
+  <div id="audioContiner" class="player-content">
+    <h1 class="player-title audioLang">...</h1>
+    <input type="file" id="inputAudios" name="audiosUploader" accept="audio/*" onclick="clearAudioUploader();" multiple>
+    <button class="sub-input-file" onclick="document.getElementById('inputAudios').click();" id="upAudLang">...</button>
+    <div class="uploaded-continer" id="audiosContiner"></div>
+  </div>
+  <div id="documentContiner" class="player-content">
+    <h1 class="player-title documentLang">...</h1>
+    <input type="file" id="inputDocuments" name="documentsUploader" accept="*" onclick="clearDocumentUploader();" multiple>
+    <button class="sub-input-file" onclick="document.getElementById('inputDocuments').click();" id="upDocLang">...</button>
+    <div class="uploaded-continer" id="documentsContiner"></div>
+  </div>
+  <div id="loadingcontainer">
+    <div id="loader"></div>
+    <div id="loadertxt">...</div>
+    <br>
+    <div id="errorsOnLoadAssets"></div>
+    <button class="confirm-load" id="lBtnLang" onclick="toDisplayNone();">...</button>
+    <div class="widther-continer">
+      <div style="width:0.0;" id="widther"></div>
+    <div id="widthernum"></div>
+    </div>
+    <div id="loadedbar" class="loading-assets">
+      <div class="blocker"></div>
+    </div>
+  </div>
+  <div class="image-display" id="imagepreviewbase" onclick="infoImgPreview();" ondblclick="closeImgPreview();">
+    <div class="image-name" id="imgName" style="margin-top: 0px;">...</div>
+    <img class="expanded-img" id="expandedImg" src="">
+    <div class="instruction-fss" id="insFss"><div id="fssl1">...</div><div> | </div><div id="fssl2">...</div></div>
+  </div>
+  <div id="scriptContainer"></div>
+  <script src="index_data/scripts/tabs.js"></script>
+  <script src="index_data/scripts/system_battery.js"></script>
+  <script src="index_data/scripts/system_clock.js"></script>
+  <script src="index_data/themes/system/languages/for_scripts.js" id="tScriptLangLoad">//<!--Customable--></script>
+  <script src="index_data/scripts/system_clendar.js"></script>
+  <script src="index_data/scripts/auto_set_local.js"></script>
+  <script src="index_data/scripts/stick_header.js"></script>
+  <script src="index_data/scripts/player_video.js"></script>
+  <script src="index_data/scripts/player_image.js"></script>
+  <script src="index_data/scripts/player_audio.js"></script>
+  <script src="index_data/scripts/player_document.js"></script>
+  <script src="index_data/scripts/images_preview.js"></script>
+  <script src="index_data/scripts/favicon.js"></script>
+  <script src="index_data/themes/system/languages/language_text.js" id="languageLoad">//<!--Customable--></script>
+  <script src="index_data/scripts/apply_settings.js"></script>
+  <script src="index_data/scripts/auto_create_registration_for_custom_themes.js"></script>
+  <script src="index_data/scripts/custom_theme_location.js"></script>
+  <script src="index_data/scripts/loading_system_assets.js"></script>
+  <script src="index_data/scripts/window_context.js"></script>
+  <script src="index_data/scripts/window_load.js"></script>
+  <script src="index_data/scripts/window_scroll.js"></script>
+  <script>
+    if(navigator.serviceWorker) {
+      if(window.location.protocol === 'https:') {
+        navigator.serviceWorker.register('/mnts.sp.org/sw.js',{scope: '/mnts.sp.org/'})
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          return false
+        });
+        document.getElementById("manifestTestLoad").setAttribute('href','/mnts.sp.org/manifest.webmanifest');
+      }else
+      if (window.location.protocol === 'file:') {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+            .then(registration => {
+              console.log('Service Worker registered for local file with scope:', registration.scope);
+            })
+            .catch(error => {
+              return false
+            });
+            document.getElementById("manifestTestLoad").setAttribute('href','./manifest.webmanifest');
+        } else {
+          console.log('Service workers are not supported in this environment.');
+        }
+      } else {
+        console.log('Service workers are not being registered on non-HTTPS or non-file protocols.');
+      }
+    }
+  </script>
 </body>
 </html>
