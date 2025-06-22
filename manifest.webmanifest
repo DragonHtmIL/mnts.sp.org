@@ -4,7 +4,7 @@
   "description": "Brows all files.",
   "scope": "/mnts.sp.org/",
   "start_url": "/mnts.sp.org/",
-  "display": "standalone",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "/mnts.sp.org/index_data/textures/system_logo.png",
