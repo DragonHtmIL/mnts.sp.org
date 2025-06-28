@@ -30,22 +30,32 @@
       </div>
       <div id="headerLogo" class="light"></div>
       <div id="titleHeader">...</div>
-
       <div class="open-menu-button" onclick="document.getElementById('menu').style.right='-0%';"></div>
   </div>
   <div id="menu">
-    <span id="closeMenu" onclick="document.getElementById('menu').style.right='-100%';"></span>
+    <span id="closeMenu" onclick="document.getElementById('menu').style.right='-100%';" class="close-windows"></span>
     <h1 id="menuTitle">...</h1>
     <div id="menuContent">
       <div class="categore" id="settingsLang">...</div>
-      <div class="setting-content" id="cThemeLocal">
-        <label for="themeLocator" id="ctTextLang">...</label>
-        <input type="text" id="themeLocator" value="index_data/themes/system">
-        <button id="cTcheck">...</button>
-        <p id="cTmessage"></p>
+      <div class="setting-content" id="tabStarted">
+        <label for="startOnTab" id="sWcTLang">...</label>
+        <select id="startOnTab" onchange="checkSettingsChanges();">
+          <option value="video" class="videoLang">...</option>
+          <option value="image" class="imageLang">...</option>
+          <option value="audio" class="audioLang">...</option>
+          <option value="document" class="documentLang">...</option>
+        </select>
+      </div>
+      <div class="setting-content" id="languageSelect">
+        <label for="langSelection" id="sLsLang">...</label>
+        <select id="langSelection" onchange="checkSettingsChanges();">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="ja">日本語</option>
+        </select>
       </div>
     </div>
-    <button id="applySettings">...</button>
+    <button id="applySettings" onclick="applySettings();">...</button>
   </div>
   <div id="tabsContiner">
     <button onclick="openPlayer(event, 'videoContiner');" class="player-tab videoLang" id="videoPlayer">...</button>
@@ -91,16 +101,19 @@
       <div class="blocker"></div>
     </div>
   </div>
-  <div class="image-display" id="imagepreviewbase" onclick="infoImgPreview();" ondblclick="closeImgPreview();">
+  <div class="image-display" id="imagepreviewbase">
+    <span class="close-windows ivfs" id="closeImgView" onclick="closeImgPreview();"></span>
     <div class="image-name" id="imgName" style="margin-top: 0px;">...</div>
     <img class="expanded-img" id="expandedImg" src="">
+    <div class="fsvi-blocker" onclick="infoImgPreview();" ondblclick="closeImgPreview();"></div>
     <div class="instruction-fss" id="insFss"><div id="fssl1">...</div><div> | </div><div id="fssl2">...</div></div>
   </div>
   <div id="scriptContainer"></div>
   <script src="index_data/scripts/tabs.js"></script>
   <script src="index_data/scripts/system_battery.js"></script>
+  <script src="index_data/scripts/languages/for_scripts.js"></script>
+  <script src="index_data/scripts/languages/language_text.js"></script>
   <script src="index_data/scripts/system_clock.js"></script>
-  <script src="index_data/themes/system/languages/for_scripts.js" id="tScriptLangLoad">//<!--Customable--></script>
   <script src="index_data/scripts/system_clendar.js"></script>
   <script src="index_data/scripts/auto_set_local.js"></script>
   <script src="index_data/scripts/stick_header.js"></script>
@@ -110,11 +123,10 @@
   <script src="index_data/scripts/player_document.js"></script>
   <script src="index_data/scripts/images_preview.js"></script>
   <script src="index_data/scripts/favicon.js"></script>
-  <script src="index_data/themes/system/languages/language_text.js" id="languageLoad">//<!--Customable--></script>
+  <script src="index_data/scripts/settings_prechanges.js"></script>
   <script src="index_data/scripts/apply_settings.js"></script>
-  <script src="index_data/scripts/auto_create_registration_for_custom_themes.js"></script>
-  <script src="index_data/scripts/custom_theme_location.js"></script>
   <script src="index_data/scripts/loading_system_assets.js"></script>
+  <script src="index_data/themes/system/style_loader.js" id="themeScript"></script>
   <script src="index_data/scripts/window_context.js"></script>
   <script src="index_data/scripts/window_load.js"></script>
   <script src="index_data/scripts/window_scroll.js"></script>

@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.sp.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '0.0.1-v2';
+var VERSION = '0.0.2-v2';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -9,9 +9,7 @@ var URLS = [
 
   `${GHPATH}/index_data/scripts`,
   `${GHPATH}/index_data/scripts/apply_settings.js`,
-  `${GHPATH}/index_data/scripts/auto_create_registration_for_custom_themes.js`,
   `${GHPATH}/index_data/scripts/auto_set_local.js`,
-  `${GHPATH}/index_data/scripts/custom_theme_location.js`,
   `${GHPATH}/index_data/scripts/favicon.js`,
   `${GHPATH}/index_data/scripts/images_preview.js`,
   `${GHPATH}/index_data/scripts/loading_system_assets.js`,
@@ -19,6 +17,7 @@ var URLS = [
   `${GHPATH}/index_data/scripts/player_document.js`,
   `${GHPATH}/index_data/scripts/player_image.js`,
   `${GHPATH}/index_data/scripts/player_video.js`,
+  `${GHPATH}/index_data/scripts/settings_prechanges.js`,
   `${GHPATH}/index_data/scripts/stick_header.js`,
   `${GHPATH}/index_data/scripts/system_battery.js`,
   `${GHPATH}/index_data/scripts/system_clendar.js`,
@@ -27,6 +26,10 @@ var URLS = [
   `${GHPATH}/index_data/scripts/window_context.js`,
   `${GHPATH}/index_data/scripts/window_load.js`,
   `${GHPATH}/index_data/scripts/window_scroll.js`,
+
+  `${GHPATH}/index_data/scripts/languages`,
+  `${GHPATH}/index_data/scripts/languages/for_scripts.js`,
+  `${GHPATH}/index_data/scripts/languages/language_text.js`,
 
   `${GHPATH}/index_data/styles`,
   `${GHPATH}/index_data/styles/system_loading_style.css`,
@@ -47,10 +50,6 @@ var URLS = [
 
   `${GHPATH}/index_data/themes/system/textures`,
 
-  `${GHPATH}/index_data/themes/system/languages`,
-  `${GHPATH}/index_data/themes/system/languages/for_scripts.js`,
-  `${GHPATH}/index_data/themes/system/languages/language_text.js`,
-
   `${GHPATH}/index_data/themes/system/textures/dark`,
   `${GHPATH}/index_data/themes/system/textures/dark/auds_remove.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/close_0.png`,
@@ -68,6 +67,8 @@ var URLS = [
   `${GHPATH}/index_data/themes/system/textures/dark/player_video.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/show_full_screen.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/vids_remove.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/next_on.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/next_off.png`,
 ];
 self.addEventListener('install', event => {
   event.waitUntil(
