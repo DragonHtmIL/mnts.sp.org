@@ -18,7 +18,7 @@ function closeImgPreview(){
 function infoImgPreview() {
   if(document.getElementById("imgName").style.marginTop === "0px") {
     document.getElementById("imgName").style.marginTop = "-25px";
-    document.getElementById("insFss").style.marginBottom = "-50px";
+    document.getElementById("insFss").style.marginBottom = "-65px";
     document.getElementById("closeImgView").style.marginRight = "-70px";
   }else{
     document.getElementById("imgName").style.marginTop = "0px";
