@@ -211,3 +211,38 @@ const loadingTextsJa = [
   "エラー",
   "完了。"
 ];
+const loadingTextsChs = [
+  "无法加载" + " ",
+  " " + " 个资产，未找到或未删除...",
+  "<br>" + "也许尝试重新加载，如果再次没有加载请告诉我们。" + "<br>",
+  "错误",
+  "完全的¿"
+];
+const loadingTextsCht = [
+  "無法載入" + " ",
+  " " + " 個資產，未找到或未刪除...",
+  "<br>" + "也許嘗試重新加載，如果再次沒有加載請告訴我們。" + "<br>",
+  "錯誤",
+  "完全的¿"
+];
+const loadingTextsKo = [
+  "" + "",
+  " " + " 개의 자산을 로드할 수 없습니다. 찾을 수 없거나 삭제되지 않았습니다...",
+  "<br>" + "다시 로드해 보세요. 그래도 로드되지 않으면 알려주세요." + "<br>",
+  "오류",
+  "완전한ㄴ"
+];
+const loadingTextsHe = [
+  "לא ניתן לטעון" + " ",
+  " " + " נכסים, לא נמצאו או הוסרו...",
+  "<br>" + "אולי תנסה לטעון מחדש, אם שוב לא נטען תגיד לנו." + "<br>",
+  "שגיאה",
+  "הושלם:"
+];
+const loadingTextsDe = [
+  "" + "",
+  " " + " Assets können nicht geladen werden, nicht gefunden oder entfernt…",
+  "<br>" + "Versuchen Sie es vielleicht erneut. Wenn es erneut nicht geladen wird, sagen Sie es uns." + "<br>",
+  "FEHLER",
+  "VOLLEN:DET"
+];
