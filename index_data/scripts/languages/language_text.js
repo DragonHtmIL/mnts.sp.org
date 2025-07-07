@@ -132,6 +132,198 @@ function loadTexts() {
     for (let i = 0; i < a003_set.length; i++) {
       a003_set[i].textContent = "書類";
     };
+  }else
+  if(localStorage.getItem("lang") === "chs") {
+    a000.innerHTML = "存.播2";
+    a001.innerHTML = "上传视频";
+    a002.innerHTML = "上传图片";
+    a003.innerHTML = "上传音频";
+    a004.innerHTML = "上传文件";
+    a005.innerHTML = "设置";
+    a006.innerHTML = "菜单";
+    a007.innerHTML = "加载中...";
+    a008.innerHTML = "继续";
+    a009.innerHTML = "在启动选项卡上打开";
+    a010.innerHTML = "语言";
+    a011.innerHTML = "申请";
+    /////////////////////////////////Ifs/////////////////////////////////
+    if(navigator.userAgent.match(/mobile/i)) {
+      a000_if.innerHTML = "一键隐藏界面";
+    }else{
+      a000_if.innerHTML = "单击隐藏界面";
+    }
+    if(navigator.userAgent.match(/mobile/i)) {
+      a001_if.innerHTML = "双击关闭";
+    }else{
+      a001_if.innerHTML = "双击关闭";
+    }
+    /////////////////////////////////Sets/////////////////////////////////
+    for (let i = 0; i < a000_set.length; i++) {
+      a000_set[i].textContent = "视频";
+    };
+    for (let i = 0; i < a001_set.length; i++) {
+      a001_set[i].textContent = "图像";
+    };
+    for (let i = 0; i < a002_set.length; i++) {
+      a002_set[i].textContent = "声音的";
+    };
+    for (let i = 0; i < a003_set.length; i++) {
+      a003_set[i].textContent = "文档";
+    };
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    a000.innerHTML = "儲.播2";
+    a001.innerHTML = "上傳影片";
+    a002.innerHTML = "上傳圖片";
+    a003.innerHTML = "上傳音訊";
+    a004.innerHTML = "上傳文件";
+    a005.innerHTML = "設定";
+    a006.innerHTML = "選單";
+    a007.innerHTML = "載入中...";
+    a008.innerHTML = "繼續";
+    a009.innerHTML = "在啟動標籤上打開";
+    a010.innerHTML = "語言";
+    a011.innerHTML = "申請";
+    /////////////////////////////////Ifs/////////////////////////////////
+    if(navigator.userAgent.match(/mobile/i)) {
+      a000_if.innerHTML = "一鍵隱藏介面";
+    }else{
+      a000_if.innerHTML = "點擊隱藏介面";
+    }
+    if(navigator.userAgent.match(/mobile/i)) {
+      a001_if.innerHTML = "按兩下關閉";
+    }else{
+      a001_if.innerHTML = "按兩下關閉";
+    }
+    /////////////////////////////////Sets/////////////////////////////////
+    for (let i = 0; i < a000_set.length; i++) {
+      a000_set[i].textContent = "影片";
+    };
+    for (let i = 0; i < a001_set.length; i++) {
+      a001_set[i].textContent = "影像";
+    };
+    for (let i = 0; i < a002_set.length; i++) {
+      a002_set[i].textContent = "聲音的";
+    };
+    for (let i = 0; i < a003_set.length; i++) {
+      a003_set[i].textContent = "文件";
+    };
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    a000.innerHTML = "스.플2";
+    a001.innerHTML = "비디오 업로드";
+    a002.innerHTML = "이미지 업로드";
+    a003.innerHTML = "오디오 업로드";
+    a004.innerHTML = "문서 업로드";
+    a005.innerHTML = "설정";
+    a006.innerHTML = "메뉴";
+    a007.innerHTML = "로딩 중...";
+    a008.innerHTML = "계속하다";
+    a009.innerHTML = "시작 시 탭 열기";
+    a010.innerHTML = "언어";
+    a011.innerHTML = "적용하다";
+    /////////////////////////////////Ifs/////////////////////////////////
+    if(navigator.userAgent.match(/mobile/i)) {
+      a000_if.innerHTML = "한 번 누르면 인터페이스가 숨겨집니다";
+    }else{
+      a000_if.innerHTML = "한 번의 클릭으로 인터페이스 숨기기";
+    }
+    if(navigator.userAgent.match(/mobile/i)) {
+      a001_if.innerHTML = "두 번 누르면 닫힙니다";
+    }else{
+      a001_if.innerHTML = "닫기를 위해 두 번 클릭하세요";
+    }
+    /////////////////////////////////Sets/////////////////////////////////
+    for (let i = 0; i < a000_set.length; i++) {
+      a000_set[i].textContent = "동영상";
+    };
+    for (let i = 0; i < a001_set.length; i++) {
+      a001_set[i].textContent = "영상";
+    };
+    for (let i = 0; i < a002_set.length; i++) {
+      a002_set[i].textContent = "오디오";
+    };
+    for (let i = 0; i < a003_set.length; i++) {
+      a003_set[i].textContent = "문서";
+    };
+  }else
+  if(localStorage.getItem("lang") === "he") {
+    a000.innerHTML = "נ.א2";
+     a000.style.direction = "rtl";
+    a001.innerHTML = "העלאת סרטונים";
+    a002.innerHTML = "העלאת תמונות";
+    a003.innerHTML = "העלאת שמע";
+    a004.innerHTML = "העלאת מסמכים";
+    a005.innerHTML = "הגדרות";
+    a006.innerHTML = "תפריט";
+    a007.innerHTML = "טעינה...";
+     a007.style.direction = "rtl";
+    a008.innerHTML = "המשך";
+    a009.innerHTML = "פתח בעת הפעלת הכרטיסייה";
+    a010.innerHTML = "שפות";
+    a011.innerHTML = "אישור";
+    /////////////////////////////////Ifs/////////////////////////////////
+    if(navigator.userAgent.match(/mobile/i)) {
+      a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
+    }else{
+      a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
+    }
+    if(navigator.userAgent.match(/mobile/i)) {
+      a001_if.innerHTML = "לחיצה כפולה לסגירה";
+    }else{
+      a001_if.innerHTML = "לחיצה כפולה לסגירה";
+    }
+    /////////////////////////////////Sets/////////////////////////////////
+    for (let i = 0; i < a000_set.length; i++) {
+      a000_set[i].textContent = "סרטון";
+    };
+    for (let i = 0; i < a001_set.length; i++) {
+      a001_set[i].textContent = "תמונה";
+    };
+    for (let i = 0; i < a002_set.length; i++) {
+      a002_set[i].textContent = "שמע";
+    };
+    for (let i = 0; i < a003_set.length; i++) {
+      a003_set[i].textContent = "מסמך";
+    };
+  }else
+  if(localStorage.getItem("lang") === "de") {
+    a000.innerHTML = "S.S2";
+    a001.innerHTML = "Videos hochladen";
+    a002.innerHTML = "Bilder hochladen";
+    a003.innerHTML = "Audios hochladen";
+    a004.innerHTML = "Dokumente hochladen";
+    a005.innerHTML = "Einstellungen";
+    a006.innerHTML = "Menü";
+    a007.innerHTML = "LADEN...";
+    a008.innerHTML = "Weitermachen";
+    a009.innerHTML = "Öffnen Sie beim Start die Registerkarte";
+    a010.innerHTML = "Sprachen";
+    a011.innerHTML = "Anwenden";
+    /////////////////////////////////Ifs/////////////////////////////////
+    if(navigator.userAgent.match(/mobile/i)) {
+      a000_if.innerHTML = "Einmal drücken, um die Benutzeroberfläche auszublenden";
+    }else{
+      a000_if.innerHTML = "Ein Klick zum Ausblenden der Benutzeroberfläche";
+    }
+    if(navigator.userAgent.match(/mobile/i)) {
+      a001_if.innerHTML = "Zum Schließen zweimal drücken";
+    }else{
+      a001_if.innerHTML = "Doppelklick zum Schließen";
+    }
+    /////////////////////////////////Sets/////////////////////////////////
+    for (let i = 0; i < a000_set.length; i++) {
+      a000_set[i].textContent = "Video";
+    };
+    for (let i = 0; i < a001_set.length; i++) {
+      a001_set[i].textContent = "Bild";
+    };
+    for (let i = 0; i < a002_set.length; i++) {
+      a002_set[i].textContent = "Audio";
+    };
+    for (let i = 0; i < a003_set.length; i++) {
+      a003_set[i].textContent = "Dokumentieren";
+    };
   }
   document.title = a000.innerHTML;
 }

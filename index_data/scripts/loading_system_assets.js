@@ -58,6 +58,33 @@ function loadTextures() {
         document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsJa[0] + errorscont + loadingTextsJa[1];
         document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsJa[2];
         document.getElementById("loadertxt").innerHTML = loadingTextsJa[3];
+      }else
+      if(localStorage.getItem("lang") === "chs") {
+        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsChs[0] + errorscont + loadingTextsChs[1];
+        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsChs[2];
+        document.getElementById("loadertxt").innerHTML = loadingTextsChs[3];
+      }else
+      if(localStorage.getItem("lang") === "cht") {
+        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsCht[0] + errorscont + loadingTextsCht[1];
+        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsCht[2];
+        document.getElementById("loadertxt").innerHTML = loadingTextsCht[3];
+      }else
+      if(localStorage.getItem("lang") === "ko") {
+        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsKo[0] + errorscont + loadingTextsKo[1];
+        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsKo[2];
+        document.getElementById("loadertxt").innerHTML = loadingTextsKo[3];
+      }else
+      if(localStorage.getItem("lang") === "he") {
+        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsHe[0] + errorscont + loadingTextsHe[1];
+        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsHe[2];
+        document.getElementById("errorsOnLoadAssets").style.direction = "rtl";
+        document.getElementById("loadertxt").innerHTML = loadingTextsHe[3];
+        document.getElementById("loadertxt").style.direction = "rtl";
+      }else
+      if(localStorage.getItem("lang") === "de") {
+        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsDe[0] + errorscont + loadingTextsDe[1];
+        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsDe[2];
+        document.getElementById("loadertxt").innerHTML = loadingTextsDe[3];
       };
       document.getElementById("errorsOnLoadAssets").style.color = "var(--red)";
     });
@@ -77,6 +104,22 @@ function toDisplayBlock() {
     }else
     if(localStorage.getItem("lang") === "ja") {
       document.getElementById("loadertxt").innerHTML = loadingTextsJa[4];
+    }else
+    if(localStorage.getItem("lang") === "chs") {
+      document.getElementById("loadertxt").innerHTML = loadingTextsChs[4];
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("loadertxt").innerHTML = loadingTextsCht[4];
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("loadertxt").innerHTML = loadingTextsKo[4];
+    }else
+    if(localStorage.getItem("lang") === "he") {
+      document.getElementById("loadertxt").innerHTML = loadingTextsHe[4];
+      document.getElementById("loadertxt").style.direction = "rtl";
+    }else
+    if(localStorage.getItem("lang") === "de") {
+      document.getElementById("loadertxt").innerHTML = loadingTextsDe[4];
     }
   }
 };
