@@ -11,7 +11,8 @@ function checkLanguageStorage() {
   }else{
     return false;
   }
-};function checkPlayerTabStorage() {
+};
+function checkPlayerTabStorage() {
   if(localStorage.getItem("tabOnStart") === null) {
     // load player
     localStorage.setItem("tabOnStart", "video");
@@ -20,6 +21,20 @@ function checkLanguageStorage() {
   if(localStorage.getItem("tabOnStart") === "") {
     // load player
     localStorage.setItem("tabOnStart", "video");
+    window.location.reload();
+  }else{
+    return false;
+  }
+};
+function checkAutoNextStorage() {
+  if(localStorage.getItem("autoNextFor") === null) {
+    // load player
+    localStorage.setItem("autoNextFor", "none");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("autoNextFor") === "") {
+    // load player
+    localStorage.setItem("autoNextFor", "none");
     window.location.reload();
   }else{
     return false;

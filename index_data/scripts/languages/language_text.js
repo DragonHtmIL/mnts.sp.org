@@ -11,6 +11,11 @@ function loadTexts() {
   var a009 = document.getElementById("sWcTLang");
   var a010 = document.getElementById("sLsLang");
   var a011 = document.getElementById("applySettings");
+  var a012 = document.getElementById("playersSettingsLang");
+  var a013 = document.getElementById("anNone");
+  var a014 = document.getElementById("anVid");
+  var a015 = document.getElementById("anAud");
+  var a016 = document.getElementById("anBoz");
   /////////////////////////////////Ifs/////////////////////////////////
   var a000_if = document.getElementById("fssl1");
   var a001_if = document.getElementById("fssl2");
@@ -32,6 +37,11 @@ function loadTexts() {
     a009.innerHTML = "Open on start the tab";
     a010.innerHTML = "Languages";
     a011.innerHTML = "Apply";
+    a012.innerHTML = "Auto play next Audios and Videos";
+    a013.innerHTML = "Auto next off";
+    a014.innerHTML = "For Video";
+    a015.innerHTML = "For Audio";
+    a016.innerHTML = "For Video and Audio";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "One press for hide interface";
@@ -70,6 +80,11 @@ function loadTexts() {
     a009.innerHTML = "Открыть при запуске вкладка";
     a010.innerHTML = "Языки";
     a011.innerHTML = "Применять";
+    a012.innerHTML = "Автоматическое воспроизведение следующих аудио и видео";
+    a013.innerHTML = "Авто следующий выкл";
+    a014.innerHTML = "Для видео";
+    a015.innerHTML = "Для аудио";
+    a016.innerHTML = "Для видео и аудио";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "Одна нажатия, чтобы скрытия интерфейс";
@@ -108,6 +123,11 @@ function loadTexts() {
     a009.innerHTML = "起動時にタブを開く";
     a010.innerHTML = "言語";
     a011.innerHTML = "適用する";
+    a012.innerHTML = "次のオーディオとビデオを自動再生";
+    a013.innerHTML = "次回自動オフ";
+    a014.innerHTML = "ビデオ用";
+    a015.innerHTML = "オーディオ用";
+    a016.innerHTML = "ビデオとオーディオ用";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "1回押すとインターフェースが非表示になります";
@@ -146,6 +166,11 @@ function loadTexts() {
     a009.innerHTML = "在启动选项卡上打开";
     a010.innerHTML = "语言";
     a011.innerHTML = "申请";
+    a012.innerHTML = "自动播放下一个音频和视频";
+    a013.innerHTML = "自动关闭";
+    a014.innerHTML = "对于视频";
+    a015.innerHTML = "对于音频";
+    a016.innerHTML = "对于视频和音频";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "一键隐藏界面";
@@ -184,6 +209,11 @@ function loadTexts() {
     a009.innerHTML = "在啟動標籤上打開";
     a010.innerHTML = "語言";
     a011.innerHTML = "申請";
+    a012.innerHTML = "自動播放下一個音頻和視頻";
+    a013.innerHTML = "自動關閉";
+    a014.innerHTML = "對於視頻";
+    a015.innerHTML = "對於音訊";
+    a016.innerHTML = "對於視頻和音訊";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "一鍵隱藏介面";
@@ -222,6 +252,11 @@ function loadTexts() {
     a009.innerHTML = "시작 시 탭 열기";
     a010.innerHTML = "언어";
     a011.innerHTML = "적용하다";
+    a012.innerHTML = "다음 오디오 및 비디오 자동 재생";
+    a013.innerHTML = "자동 다음 끄기";
+    a014.innerHTML = "비디오용";
+    a015.innerHTML = "오디오용";
+    a016.innerHTML = "비디오 및 오디오용";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "한 번 누르면 인터페이스가 숨겨집니다";
@@ -262,6 +297,11 @@ function loadTexts() {
     a009.innerHTML = "פתח בעת הפעלת הכרטיסייה";
     a010.innerHTML = "שפות";
     a011.innerHTML = "אישור";
+    a012.innerHTML = "הפעלה אוטומטית של אודיו וסרטונים הבאים";
+    a013.innerHTML = "הבא אוטומטי כבוי";
+    a014.innerHTML = "לסרטון";
+    a015.innerHTML = "לאודיו";
+    a016.innerHTML = "עבור וידאו ואודיו";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
@@ -300,6 +340,11 @@ function loadTexts() {
     a009.innerHTML = "Öffnen Sie beim Start die Registerkarte";
     a010.innerHTML = "Sprachen";
     a011.innerHTML = "Anwenden";
+    a012.innerHTML = "Nächste Audios und Videos automatisch abspielen";
+    a013.innerHTML = "Auto Weiter aus";
+    a014.innerHTML = "Für Video";
+    a015.innerHTML = "Für Audio";
+    a016.innerHTML = "Für Video und Audio";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "Einmal drücken, um die Benutzeroberfläche auszublenden";

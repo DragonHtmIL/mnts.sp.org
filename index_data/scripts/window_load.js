@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
   checkPlayerTabStorage();
   loadIcon();
   loadTextures();
+  checkAutoNextStorage();
   if(localStorage.getItem("lang") === "en") {
     document.getElementById("langSelection").value = "en";
   }else
@@ -43,6 +44,18 @@ window.addEventListener('load', function() {
   if(localStorage.getItem("tabOnStart") === "document") {
     document.getElementById("documentPlayer").click();
     document.getElementById("startOnTab").value = "document";
+  };
+  if(localStorage.getItem("autoNextFor") === "none") {
+    document.getElementById("autoNextSelection").value = "none";
+  }else
+  if(localStorage.getItem("autoNextFor") === "video") {
+    document.getElementById("autoNextSelection").value = "video";
+  }else
+  if(localStorage.getItem("autoNextFor") === "audio") {
+    document.getElementById("autoNextSelection").value = "audio";
+  }else
+  if(localStorage.getItem("autoNextFor") === "both") {
+    document.getElementById("autoNextSelection").value = "both";
   };
   setInterval(displayTime, 1);
   setInterval(displayDate, 1);

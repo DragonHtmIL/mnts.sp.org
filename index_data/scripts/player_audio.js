@@ -20,7 +20,22 @@ document.querySelector("input[name=audiosUploader]").onchange = function(event) 
     buttonloop.className = "loop-off";
     buttonloop.id = "loopBtn";
     buttonloop.disabled = true;
-    autoNextButton.className = "auto-next-on";
+    if(document.getElementById("autoNextSelection").value === "none") {
+      autoNextButton.className = "auto-next-off";
+      buttonloop.disabled = false;
+    }else
+    if(document.getElementById("autoNextSelection").value === "video") {
+      autoNextButton.className = "auto-next-off";
+      buttonloop.disabled = false;
+    }else
+    if(document.getElementById("autoNextSelection").value === "audio") {
+      autoNextButton.className = "auto-next-on";
+      buttonloop.disabled = true;
+    }else
+    if(document.getElementById("autoNextSelection").value === "both") {
+      autoNextButton.className = "auto-next-on";
+      buttonloop.disabled = true;
+    }
     autoNextButton.id = "nextBtn";
     span.className = "aud-label";
     div.className = "aud-frame";
