@@ -59,6 +59,15 @@
           <option value="de">Deutsche</option>
         </select>
       </div>
+      <div class="setting-content" id="languageSelect">
+        <div id="playersSettingsLang">...</div>
+        <select id="autoNextSelection" onchange="checkSettingsChanges();">
+          <option value="none" id="anNone">...</option>
+          <option value="video" id="anVid">...</option>
+          <option value="audio" id="anAud">...</option>
+          <option value="both" id="anBoz">...</option>
+        </select>
+      </div>
     </div>
     <button id="applySettings" onclick="applySettings();">...</button>
   </div>
