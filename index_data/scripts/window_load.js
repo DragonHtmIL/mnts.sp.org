@@ -5,6 +5,7 @@ window.addEventListener('load', function() {
   loadIcon();
   loadTextures();
   checkAutoNextStorage();
+  checkSystemThemeLocationStorage();
   if(localStorage.getItem("lang") === "en") {
     document.getElementById("langSelection").value = "en";
   }else
