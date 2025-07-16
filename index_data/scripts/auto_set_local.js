@@ -40,3 +40,17 @@ function checkAutoNextStorage() {
     return false;
   }
 };
+function checkSystemThemeLocationStorage() {
+  if(localStorage.getItem("themeLocation") === null) {
+    // load system theme
+    localStorage.setItem("themeLocation", "index_data/themes/system/");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("themeLocation") === "") {
+    // load system theme
+    localStorage.setItem("themeLocation", "none");
+    window.location.reload();
+  }else{
+    return false;
+  }
+};
