@@ -129,4 +129,5 @@ audio::-webkit-media-controls-panel {
   position: absolute;
   width: 100%;
   height: calc(100% - 56px);
+  cursor: pointer;
 }
