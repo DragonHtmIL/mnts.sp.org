@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.sp.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '0.0.6-v2';
+var VERSION = '0.0.7-v2';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
