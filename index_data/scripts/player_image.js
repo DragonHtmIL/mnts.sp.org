@@ -30,6 +30,10 @@ document.querySelector("input[name=imagesUploader]").onchange = function(event) 
       document.getElementById("imgName").innerHTML = image.alt;
       showImage(image);
     });
+    blocker.addEventListener('click', function() {
+      document.getElementById("imgName").innerHTML = image.alt;
+      showImage(image);
+    });
     image.ondragstart = function() {return false;};
     div.appendChild(image);
     btncontiner.appendChild(button);
