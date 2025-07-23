@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.sp.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '0.0.7-v2';
+var VERSION = '0.0.8-v2';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -26,6 +26,8 @@ var URLS = [
   `${GHPATH}/index_data/scripts/window_context.js`,
   `${GHPATH}/index_data/scripts/window_load.js`,
   `${GHPATH}/index_data/scripts/window_scroll.js`,
+  `${GHPATH}/index_data/scripts/keyboard_keys.js`,
+  `${GHPATH}/index_data/scripts/customed_checkboxes.js`,
 
   `${GHPATH}/index_data/scripts/languages`,
   `${GHPATH}/index_data/scripts/languages/for_scripts.js`,
