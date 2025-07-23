@@ -130,9 +130,10 @@ body {
   width: 100%;
 }
 .player-content {
-  display: none;
   height: auto;
   margin: auto;
+  width: 100vw;
+  position: absolute;
 }
 .device-info-indicator {
   position: relative;
