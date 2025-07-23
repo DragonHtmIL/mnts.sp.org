@@ -31,59 +31,59 @@ document.onkeydown = function (event) {
   }else
   if (event.keyCode == 13) {
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.display === "block" &&
-    document.getElementById("imageContiner").style.display === "none" &&
-    document.getElementById("audioContiner").style.display === "none" &&
-    document.getElementById("documentContiner").style.display === "none") {
+    document.getElementById("videoContiner").style.left === "0%" &&
+    document.getElementById("imageContiner").style.left === "auto" &&
+    document.getElementById("audioContiner").style.left === "auto" &&
+    document.getElementById("documentContiner").style.left === "auto") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.display === "none" &&
-    document.getElementById("imageContiner").style.display === "block" &&
-    document.getElementById("audioContiner").style.display === "none" &&
-    document.getElementById("documentContiner").style.display === "none") {
+    document.getElementById("videoContiner").style.left === "-100%" &&
+    document.getElementById("imageContiner").style.left === "0%" &&
+    document.getElementById("audioContiner").style.left === "auto" &&
+    document.getElementById("documentContiner").style.left === "auto") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.display === "none" &&
-    document.getElementById("imageContiner").style.display === "none" &&
-    document.getElementById("audioContiner").style.display === "block" &&
-    document.getElementById("documentContiner").style.display === "none") {
+    document.getElementById("videoContiner").style.left === "-100%" &&
+    document.getElementById("imageContiner").style.left === "-100%" &&
+    document.getElementById("audioContiner").style.left === "0%" &&
+    document.getElementById("documentContiner").style.left === "auto") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.display === "none" &&
-    document.getElementById("imageContiner").style.display === "none" &&
-    document.getElementById("audioContiner").style.display === "none" &&
-    document.getElementById("documentContiner").style.display === "block") {
+    document.getElementById("videoContiner").style.left === "-100%" &&
+    document.getElementById("imageContiner").style.left === "-100%" &&
+    document.getElementById("audioContiner").style.left === "-100%" &&
+    document.getElementById("documentContiner").style.left === "0%") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.display === "block" &&
-    document.getElementById("imageContiner").style.display === "none" &&
-    document.getElementById("audioContiner").style.display === "none" &&
-    document.getElementById("documentContiner").style.display === "none") {
+    document.getElementById("videoContiner").style.left === "0%" &&
+    document.getElementById("imageContiner").style.left === "auto" &&
+    document.getElementById("audioContiner").style.left === "auto" &&
+    document.getElementById("documentContiner").style.left === "auto") {
       document.getElementById("inputVideos").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.display === "none" &&
-    document.getElementById("imageContiner").style.display === "block" &&
-    document.getElementById("audioContiner").style.display === "none" &&
-    document.getElementById("documentContiner").style.display === "none") {
+    document.getElementById("videoContiner").style.left === "-100%" &&
+    document.getElementById("imageContiner").style.left === "0%" &&
+    document.getElementById("audioContiner").style.left === "auto" &&
+    document.getElementById("documentContiner").style.left === "auto") {
       document.getElementById("inputImages").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.display === "none" &&
-    document.getElementById("imageContiner").style.display === "none" &&
-    document.getElementById("audioContiner").style.display === "block" &&
-    document.getElementById("documentContiner").style.display === "none") {
+    document.getElementById("videoContiner").style.left === "-100%" &&
+    document.getElementById("imageContiner").style.left === "-100%" &&
+    document.getElementById("audioContiner").style.left === "0%" &&
+    document.getElementById("documentContiner").style.left === "auto") {
       document.getElementById("inputAudios").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.display === "none" &&
-    document.getElementById("imageContiner").style.display === "none" &&
-    document.getElementById("audioContiner").style.display === "none" &&
-    document.getElementById("documentContiner").style.display === "block") {
+    document.getElementById("videoContiner").style.left === "-100%" &&
+    document.getElementById("imageContiner").style.left === "-100%" &&
+    document.getElementById("audioContiner").style.left === "-100%" &&
+    document.getElementById("documentContiner").style.left === "0%") {
       document.getElementById("inputDocuments").click();
     }else{
       console.log("something else have an error...");
