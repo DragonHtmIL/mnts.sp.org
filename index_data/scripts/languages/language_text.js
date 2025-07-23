@@ -16,6 +16,7 @@ function loadTexts() {
   var a014 = document.getElementById("anVid");
   var a015 = document.getElementById("anAud");
   var a016 = document.getElementById("anBoz");
+  var a017 = document.getElementById("adminToolsLang");
   /////////////////////////////////Ifs/////////////////////////////////
   var a000_if = document.getElementById("fssl1");
   var a001_if = document.getElementById("fssl2");
@@ -42,6 +43,7 @@ function loadTexts() {
     a014.innerHTML = "For Video";
     a015.innerHTML = "For Audio";
     a016.innerHTML = "For Video and Audio";
+    a017.innerHTML = "Developments";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "One press for hide interface";
@@ -85,6 +87,7 @@ function loadTexts() {
     a014.innerHTML = "Для видео";
     a015.innerHTML = "Для аудио";
     a016.innerHTML = "Для видео и аудио";
+    a017.innerHTML = "Разработки";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "Одна нажатия, чтобы скрытия интерфейс";
@@ -128,6 +131,7 @@ function loadTexts() {
     a014.innerHTML = "ビデオ用";
     a015.innerHTML = "オーディオ用";
     a016.innerHTML = "ビデオとオーディオ用";
+    a017.innerHTML = "開発";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "1回押すとインターフェースが非表示になります";
@@ -171,6 +175,7 @@ function loadTexts() {
     a014.innerHTML = "对于视频";
     a015.innerHTML = "对于音频";
     a016.innerHTML = "对于视频和音频";
+    a017.innerHTML = "发展";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "一键隐藏界面";
@@ -214,6 +219,7 @@ function loadTexts() {
     a014.innerHTML = "對於視頻";
     a015.innerHTML = "對於音訊";
     a016.innerHTML = "對於視頻和音訊";
+    a017.innerHTML = "發展";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "一鍵隱藏介面";
@@ -257,6 +263,7 @@ function loadTexts() {
     a014.innerHTML = "비디오용";
     a015.innerHTML = "오디오용";
     a016.innerHTML = "비디오 및 오디오용";
+    a017.innerHTML = "개발";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "한 번 누르면 인터페이스가 숨겨집니다";
@@ -302,6 +309,9 @@ function loadTexts() {
     a014.innerHTML = "לסרטון";
     a015.innerHTML = "לאודיו";
     a016.innerHTML = "עבור וידאו ואודיו";
+    a017.innerHTML = "התפתחויות";
+     a017.style.width = "100%";
+     a017.style.textAlign = "right";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
@@ -345,6 +355,7 @@ function loadTexts() {
     a014.innerHTML = "Für Video";
     a015.innerHTML = "Für Audio";
     a016.innerHTML = "Für Video und Audio";
+    a017.innerHTML = "Entwicklungen";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "Einmal drücken, um die Benutzeroberfläche auszublenden";

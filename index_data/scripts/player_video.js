@@ -1,7 +1,9 @@
+let vidCounter = 0;
 document.querySelector("input[name=videosUploader]").onchange = function(event) {
   const preview = document.getElementById('videosContiner');
   var numberOfVideos = event.target.files.length;
   for (var i = 0; i < numberOfVideos; i++) {
+    vidCounter = ++vidCounter;
     var file = event.target.files[i];
     var blobURL = URL.createObjectURL(file);
     const div = document.createElement('div');
@@ -44,6 +46,8 @@ document.querySelector("input[name=videosUploader]").onchange = function(event) 
     btncontiner.className = "buttons-continer";
     button.addEventListener('click', () => {
       preview.removeChild(div);
+      vidCounter = --vidCounter;
+      document.getElementById("vidsUploaded").innerHTML = vidCounter;
     });
     buttonloop.addEventListener('click', () => {
       if (buttonloop.className === "loop-off") {
@@ -125,6 +129,7 @@ document.querySelector("input[name=videosUploader]").onchange = function(event) 
       } else {
       }
     });
+    document.getElementById("vidsUploaded").innerHTML = vidCounter;
     div.appendChild(video);
     btncontiner.appendChild(button);
     btncontiner.appendChild(buttonloop);

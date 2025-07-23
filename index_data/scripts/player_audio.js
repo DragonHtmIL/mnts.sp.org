@@ -1,8 +1,9 @@
-
+let audCounter = 0;
 document.querySelector("input[name=audiosUploader]").onchange = function(event) {
   const preview = document.getElementById('audiosContiner');
   var numberOfAudios = event.target.files.length;
   for (var i = 0; i < numberOfAudios; i++) {
+    audCounter = ++audCounter;
     var file = event.target.files[i];
     var blobURL = URL.createObjectURL(file);
     const div = document.createElement('div');
@@ -45,6 +46,8 @@ document.querySelector("input[name=audiosUploader]").onchange = function(event) 
     btncontiner.className = "buttons-continer";
     button.addEventListener('click', () => {
       preview.removeChild(div);
+      audCounter = --audCounter;
+      document.getElementById("audsUploaded").innerHTML = audCounter;
     });
     buttonloop.addEventListener('click', () => {
       if(buttonloop.className === "loop-off") {
@@ -93,6 +96,7 @@ document.querySelector("input[name=audiosUploader]").onchange = function(event) 
         }
       }
     });
+    document.getElementById("audsUploaded").innerHTML = audCounter;
     div.appendChild(audio);
     btncontiner.appendChild(button);
     btncontiner.appendChild(buttonloop);
