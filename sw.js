@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.sp.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '0.0.9-v2';
+var VERSION = '0.1.0-v2';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -71,6 +71,7 @@ var URLS = [
   `${GHPATH}/index_data/themes/system/textures/dark/vids_remove.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/next_on.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/next_off.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/player_top_btn.png`
 ];
 self.addEventListener('install', event => {
   event.waitUntil(
