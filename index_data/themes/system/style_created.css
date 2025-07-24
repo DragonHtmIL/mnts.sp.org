@@ -159,6 +159,6 @@ audio::-webkit-media-controls-panel {
 }
 .if-full-close {
   position: fixed;
-  margin-right: -100%;
+  margin-right: -67px;
   z-index: 9;
 }
