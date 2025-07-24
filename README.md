@@ -20,9 +20,6 @@ this site is free usage;
 <hr>
   Thanks:<br>
   MNTS,<br>
-  NetEase,<br>
-  Online Converter,<br>
-  Xiaomi Screen Recorder,<br>
   Microsoft Visual Studio Code,<br>
   Google Translate,<br>
   GitHub,<br>
