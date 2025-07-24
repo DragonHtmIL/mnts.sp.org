@@ -26,7 +26,8 @@ const assets = [
   "show_full_screen",
   "vids_remove",
   "next_off",
-  "next_on"
+  "next_on",
+  "player_top_btn"
 ];
 function loadTextures() {
   for(var asset = 0; asset < assets.length; asset++) {
@@ -36,7 +37,7 @@ function loadTextures() {
     casset.style.height = "1px";
     casset.style.opacity = "0";
     casset.addEventListener("load", function() {
-      widthcont = widthcont + 5.555555555555556;
+      widthcont = widthcont + 5.263157894736842;
       loadedcont = loadedcont + 1;
       document.getElementById('widther').style.width = widthcont + "%";
       document.getElementById('widthernum').innerHTML = loadedcont;

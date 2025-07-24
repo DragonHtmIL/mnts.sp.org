@@ -43,7 +43,7 @@ document.querySelector("input[name=documentsUploader]").onchange = function(even
       if(iframe.className === "i-frame-full") {
         iframe.classList.remove("i-frame-full");
         ifspace.style.display = "none";
-        iffullclose.style.marginRight = "-100%";
+        iffullclose.style.marginRight = "-67px";
       }else{
         iframe.classList.add("i-frame-full");
         ifspace.style.display = "block";

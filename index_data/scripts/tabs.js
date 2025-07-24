@@ -1,56 +1,76 @@
 function playerVideo() {
-  document.getElementById("videoContiner").style.right = "0%";
-  document.getElementById("videoContiner").style.left = "0%";
-  document.getElementById("imageContiner").style.right = "-100%";
-  document.getElementById("imageContiner").style.left = "auto";
-  document.getElementById("audioContiner").style.right = "-100%";
-  document.getElementById("audioContiner").style.left = "auto";
-  document.getElementById("documentContiner").style.right = "-100%";
-  document.getElementById("documentContiner").style.left = "auto";
+  const content = document.getElementById("videoContiner");
+  document.getElementById("videoContiner").style.bottom = "0%";
+  document.getElementById("imageContiner").style.bottom = "-100%";
+  document.getElementById("audioContiner").style.bottom = "-100%";
+  document.getElementById("documentContiner").style.bottom = "-100%";
   document.getElementById("videoPlayer").classList = "player-tab videoLang active";
   document.getElementById("imagePlayer").classList = "player-tab imageLang";
   document.getElementById("audioPlayer").classList = "player-tab audioLang";
   document.getElementById("documentPlayer").classList = "player-tab documentLang";
+  if(content.scrollTop > 50) {
+    document.getElementById("scrollToThisElementVid").style.right = "0%";
+  }else{
+    document.getElementById("scrollToThisElementVid").style.right = "-85px";
+  }
+  document.getElementById("scrollToThisElementImg").style.right = "-85px";
+  document.getElementById("scrollToThisElementAud").style.right = "-85px";
+  document.getElementById("scrollToThisElementDoc").style.right = "-85px";
 }
 function playerImage() {
-  document.getElementById("videoContiner").style.right = "auto";
-  document.getElementById("videoContiner").style.left = "-100%";
-  document.getElementById("imageContiner").style.right = "0%";
-  document.getElementById("imageContiner").style.left = "0%";
-  document.getElementById("audioContiner").style.right = "-100%";
-  document.getElementById("audioContiner").style.left = "auto";
-  document.getElementById("documentContiner").style.right = "-100%";
-  document.getElementById("documentContiner").style.left = "auto";
+  const content = document.getElementById("imageContiner");
+  document.getElementById("videoContiner").style.bottom = "-100%";
+  document.getElementById("imageContiner").style.bottom = "0%";
+  document.getElementById("audioContiner").style.bottom = "-100%";
+  document.getElementById("documentContiner").style.bottom = "-100%";
   document.getElementById("videoPlayer").classList = "player-tab videoLang";
   document.getElementById("imagePlayer").classList = "player-tab imageLang active";
   document.getElementById("audioPlayer").classList = "player-tab audioLang";
   document.getElementById("documentPlayer").classList = "player-tab documentLang";
+  if(content.scrollTop > 50) {
+    document.getElementById("scrollToThisElementImg").style.right = "0%";
+  }else{
+    document.getElementById("scrollToThisElementImg").style.right = "-85px";
+  }
+  document.getElementById("scrollToThisElementVid").style.right = "-85px";
+  document.getElementById("scrollToThisElementAud").style.right = "-85px";
+  document.getElementById("scrollToThisElementDoc").style.right = "-85px";
 }
 function playerAudio() {
-  document.getElementById("videoContiner").style.right = "auto";
-  document.getElementById("videoContiner").style.left = "-100%";
-  document.getElementById("imageContiner").style.right = "auto";
-  document.getElementById("imageContiner").style.left = "-100%";
-  document.getElementById("audioContiner").style.right = "0%";
-  document.getElementById("audioContiner").style.left = "0%";
-  document.getElementById("documentContiner").style.right = "-100%";
-  document.getElementById("documentContiner").style.left = "auto";
+  const content = document.getElementById("audioContiner");
+  document.getElementById("videoContiner").style.bottom = "-100%";
+  document.getElementById("imageContiner").style.bottom = "-100%";
+  document.getElementById("audioContiner").style.bottom = "0%";
+  document.getElementById("documentContiner").style.bottom = "-100%";
   document.getElementById("videoPlayer").classList = "player-tab videoLang";
   document.getElementById("imagePlayer").classList = "player-tab imageLang";
   document.getElementById("audioPlayer").classList = "player-tab audioLang active";
   document.getElementById("documentPlayer").classList = "player-tab documentLang";
+  if(content.scrollTop > 50) {
+    document.getElementById("scrollToThisElementAud").style.right = "0%";
+  }else{
+    document.getElementById("scrollToThisElementAud").style.right = "-85px";
+  }
+  document.getElementById("scrollToThisElementVid").style.right = "-85px";
+  document.getElementById("scrollToThisElementImg").style.right = "-85px";
+  document.getElementById("scrollToThisElementDoc").style.right = "-85px";
 }
 function playerDocument() {
-  document.getElementById("videoContiner").style.right = "auto";
-  document.getElementById("videoContiner").style.left = "-100%";
-  document.getElementById("imageContiner").style.right = "auto";
-  document.getElementById("imageContiner").style.left = "-100%";
-  document.getElementById("audioContiner").style.right = "auto";
-  document.getElementById("audioContiner").style.left = "-100%";
-  document.getElementById("documentContiner").style.right = "0%";
-  document.getElementById("documentContiner").style.left = "0%";
+  const content = document.getElementById("documentContiner");
+  document.getElementById("videoContiner").style.bottom = "-100%";
+  document.getElementById("imageContiner").style.bottom = "-100%";
+  document.getElementById("audioContiner").style.bottom = "-100%";
+  document.getElementById("documentContiner").style.bottom = "0%";
   document.getElementById("videoPlayer").classList = "player-tab videoLang";
   document.getElementById("imagePlayer").classList = "player-tab imageLang";
   document.getElementById("audioPlayer").classList = "player-tab audioLang";
   document.getElementById("documentPlayer").classList = "player-tab documentLang active";
+  if(content.scrollTop > 50) {
+    document.getElementById("scrollToThisElementDoc").style.right = "0%";
+  }else{
+    document.getElementById("scrollToThisElementDoc").style.right = "-85px";
+  }
+  document.getElementById("scrollToThisElementVid").style.right = "-85px";
+  document.getElementById("scrollToThisElementImg").style.right = "-85px";
+  document.getElementById("scrollToThisElementAud").style.right = "-85px";
 }
