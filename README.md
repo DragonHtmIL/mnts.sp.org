@@ -1,4 +1,4 @@
-<h3><a href="https://dragonhtmil.github.io/mnts.smc.org/">Open the app</a></h3>
+<h3><a href="https://dragonhtmil.github.io/mnts.sp.org/">Open the app</a></h3>
 There is a WebApp with playes of Videos, Images, Audios and Documents.<br>
 MNTS make this WebApp with coding in 30minutes up to 1-2 hourse through <a href="https://code.visualstudio.com">Visual Studio Code</a>.
 <hr>
