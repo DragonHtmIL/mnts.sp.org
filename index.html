@@ -76,6 +76,12 @@
           <div id="ch0001true" class="chox true">✓</div>
         </div>
       </div>
+      <div class="setting-content" id="reloadPage">
+        <button id="reloadPageBtn" onclick="reload()">...</button>
+      </div>
+      <div class="setting-content" id="closePage">
+        <button id="closePageBtn" onclick="cLose()">...</button>
+      </div>
     </div>
     <button id="applySettings" onclick="applySettings();">...</button>
   </div>
@@ -140,6 +146,16 @@
       <div id="fssl2">...</div>
     </div>
   </div>
+  <div class="alert-modal" id="alert">
+    <div class="alert-content" id="alertContent">
+      <div class="alert-name" id="alertName">...</div>
+      <div class="alert-text" id="alertText">...</div>
+      <div class="alert-buttons" id="alertButtons">
+        <button id="alertCancel">...</button>
+        <button id="alertConfirm">...</button>
+      </div>
+    </div>
+  </div>
   <div id="scriptContainer"></div>
   <script src="index_data/scripts/tabs.js"></script>
   <script src="index_data/scripts/system_battery.js"></script>
@@ -165,6 +181,8 @@
   <script src="index_data/themes/system/style_loader.js" id="themeScript"></script>
   <script src="index_data/scripts/keyboard_keys.js"></script>
   <script src="index_data/scripts/customed_checkboxes.js"></script>
+  <script src="index_data/scripts/reload.js"></script>
+  <script src="index_data/scripts/close.js"></script>
   <script src="index_data/scripts/window_context.js"></script>
   <script src="index_data/scripts/window_load.js"></script>
   <script src="index_data/scripts/window_scroll.js"></script>
@@ -182,7 +200,7 @@
       }else
       if (window.location.protocol === 'file:') {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+          navigator.serviceWorker.register('/sw.js', { scope: '/' })
             .then(registration => {
               console.log('Service Worker registered for local file with scope:', registration.scope);
             })
