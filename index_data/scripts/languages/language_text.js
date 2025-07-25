@@ -17,6 +17,10 @@ function loadTexts() {
   var a015 = document.getElementById("anAud");
   var a016 = document.getElementById("anBoz");
   var a017 = document.getElementById("adminToolsLang");
+  var a018 = document.getElementById("alertCancel");
+  var a019 = document.getElementById("alertConfirm");
+  var a020 = document.getElementById("reloadPageBtn");
+  var a021 = document.getElementById("closePageBtn");
   /////////////////////////////////Ifs/////////////////////////////////
   var a000_if = document.getElementById("fssl1");
   var a001_if = document.getElementById("fssl2");
@@ -44,6 +48,10 @@ function loadTexts() {
     a015.innerHTML = "For Audio";
     a016.innerHTML = "For Video and Audio";
     a017.innerHTML = "Developments";
+    a018.innerHTML = "No";
+    a019.innerHTML = "Yes";
+    a020.innerHTML = "Reload";
+    a021.innerHTML = "Close";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "One press for hide interface";
@@ -70,7 +78,7 @@ function loadTexts() {
     };
   }else
   if(localStorage.getItem("lang") === "ru") {
-    a000.innerHTML = "П.П2";
+    a000.innerHTML = "П.Х2";
     a001.innerHTML = "Загрузить видео";
     a002.innerHTML = "Загрузить изображения";
     a003.innerHTML = "Загрузить аудио";
@@ -88,6 +96,10 @@ function loadTexts() {
     a015.innerHTML = "Для аудио";
     a016.innerHTML = "Для видео и аудио";
     a017.innerHTML = "Разработки";
+    a018.innerHTML = "Нет";
+    a019.innerHTML = "Да";
+    a020.innerHTML = "Перезагрузить";
+    a021.innerHTML = "Закрыть";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "Одна нажатия, чтобы скрытия интерфейс";
@@ -132,6 +144,10 @@ function loadTexts() {
     a015.innerHTML = "オーディオ用";
     a016.innerHTML = "ビデオとオーディオ用";
     a017.innerHTML = "開発";
+    a018.innerHTML = "いいえ";
+    a019.innerHTML = "はい";
+    a020.innerHTML = "リロードします";
+    a021.innerHTML = "近い";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "1回押すとインターフェースが非表示になります";
@@ -176,6 +192,10 @@ function loadTexts() {
     a015.innerHTML = "对于音频";
     a016.innerHTML = "对于视频和音频";
     a017.innerHTML = "发展";
+    a018.innerHTML = "否";
+    a019.innerHTML = "是";
+    a020.innerHTML = "重新加载";
+    a021.innerHTML = "关闭";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "一键隐藏界面";
@@ -220,6 +240,10 @@ function loadTexts() {
     a015.innerHTML = "對於音訊";
     a016.innerHTML = "對於視頻和音訊";
     a017.innerHTML = "發展";
+    a018.innerHTML = "否";
+    a019.innerHTML = "是";
+    a020.innerHTML = "重新載入";
+    a021.innerHTML = "關閉";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "一鍵隱藏介面";
@@ -264,6 +288,10 @@ function loadTexts() {
     a015.innerHTML = "오디오용";
     a016.innerHTML = "비디오 및 오디오용";
     a017.innerHTML = "개발";
+    a018.innerHTML = "아니요";
+    a019.innerHTML = "예";
+    a020.innerHTML = "재장전";
+    a021.innerHTML = "닫다";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "한 번 누르면 인터페이스가 숨겨집니다";
@@ -312,6 +340,10 @@ function loadTexts() {
     a017.innerHTML = "התפתחויות";
      a017.style.width = "100%";
      a017.style.textAlign = "right";
+    a018.innerHTML = "לא";
+    a019.innerHTML = "כן";
+    a020.innerHTML = "טעינה מחדש";
+    a021.innerHTML = "סגירה";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
@@ -356,6 +388,10 @@ function loadTexts() {
     a015.innerHTML = "Für Audio";
     a016.innerHTML = "Für Video und Audio";
     a017.innerHTML = "Entwicklungen";
+    a018.innerHTML = "Nein";
+    a019.innerHTML = "Ja";
+    a020.innerHTML = "Neu laden";
+    a021.innerHTML = "Schließen";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
       a000_if.innerHTML = "Einmal drücken, um die Benutzeroberfläche auszublenden";
