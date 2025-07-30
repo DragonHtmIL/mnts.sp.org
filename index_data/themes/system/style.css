@@ -100,12 +100,10 @@ body {
   filter: drop-shadow(0px 0px 0px var(--shadow)) grayscale(1);
 }
 #tabsContiner .player-tab:hover {
-  z-index: 1;
   box-shadow: inset 0px 0px 5px var(--shadow);
   filter: drop-shadow(0px 0px 5px var(--shadow)) grayscale(0.5);
 }
 #tabsContiner .player-tab.active {
-  z-index: 2;
   border-color: var(--border-effect);
   box-shadow: inset 0px 0px 5px var(--shadow-effect);
   filter: drop-shadow(0px 0px 5px var(--shadow-effect)) grayscale(0);
@@ -233,7 +231,7 @@ input[type="file"] {
   position: fixed;
   top: 0;
   right: -100%;
-  z-index: 1;
+  z-index: 3;
   backdrop-filter: blur(5px);
   background-color: var(--modals-backgrounds);
   border-left: solid 2px var(--border);
@@ -343,7 +341,7 @@ button:hover {
   height: 100%;
   display: block;
   overflow: hidden;
-  z-index: 4;
+  z-index: 2;
   background: var(--background);
   backdrop-filter: blur(0px);
   cursor: pointer;
@@ -471,11 +469,10 @@ input[type="checkbox"] {
   backdrop-filter: blur(5px);
   background-color: var(--modals-backgrounds);
   border-left: solid 2px var(--border);
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
 }
 .alert-content {
   width: 50vw;
