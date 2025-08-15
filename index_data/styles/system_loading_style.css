@@ -86,11 +86,6 @@
 .confirm-load {
   width: 320px;
   position: relative;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--loading-animation-gray);
-  background-color: var(--loading);
-  color: var(--loading-animation-lgray);
   margin-bottom: 10px;
   display: none;
   z-index: 1;
@@ -98,10 +93,9 @@
   border-radius: 5px;
 }
 .confirm-load:hover {
-  border-color: var(--loading-animation-lgray);
-  background-color: var(--loading-animation-gray);
-  color: var(--loading-animation-blue);
-  box-shadow: 0px 0px 5px var(--loading-animation-lgray), inset 0px 0px 5px var(--loading-animation-lgray);
+  border-color: var(--border-effect);
+  color: var(--border-effect);
+  filter: drop-shadow(0px 0px 5px var(--shadow-effect));
 }
 @-webkit-keyframes spin {
   0% {
