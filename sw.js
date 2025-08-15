@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.sp.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '0.1.2-v2';
+var VERSION = '0.1.3-v2';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -58,22 +58,34 @@ var URLS = [
   `${GHPATH}/index_data/themes/system/textures/dark/auds_remove.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/close_0.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/close_1.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/close_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/docs_remove.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/icon.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/imgs_remove.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/loop_off.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/loop_off_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/loop_on.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/loop_on_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/menu_0.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/menu_1.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/menu_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/player_audio.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/player_audio_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/player_document.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/player_document_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/player_image.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/player_image_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/player_video.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/player_video_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/show_full_screen.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/show_full_screen_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/vids_remove.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/next_on.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/next_on_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/next_off.png`,
+  `${GHPATH}/index_data/themes/system/textures/dark/next_off_2.png`,
   `${GHPATH}/index_data/themes/system/textures/dark/player_top_btn.png`
+  `${GHPATH}/index_data/themes/system/textures/dark/player_top_btn_2.png`
 ];
 self.addEventListener('install', event => {
   event.waitUntil(
