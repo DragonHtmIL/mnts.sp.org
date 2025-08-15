@@ -96,29 +96,46 @@ body {
   color: var(--text);
   border: solid 1px var(--border);
   border-bottom: none;
-  box-shadow: inset 0px 0px 0px var(--shadow);
-  filter: drop-shadow(0px 0px 0px var(--shadow)) grayscale(1);
+  box-shadow: inset 0px 0px 5px var(--shadow);
+  filter: drop-shadow(0px 0px 5px var(--shadow)) grayscale(1);
+  letter-spacing: 0;
 }
 #tabsContiner .player-tab:hover {
-  box-shadow: inset 0px 0px 5px var(--shadow);
-  filter: drop-shadow(0px 0px 5px var(--shadow)) grayscale(0.5);
-}
-#tabsContiner .player-tab.active {
   border-color: var(--border-effect);
   box-shadow: inset 0px 0px 5px var(--shadow-effect);
   filter: drop-shadow(0px 0px 5px var(--shadow-effect)) grayscale(0);
+  letter-spacing: 1px;
+}
+#tabsContiner .player-tab.active {
+  border-color: var(--border-active);
+  box-shadow: inset 0px 0px 5px var(--shadow-active);
+  filter: drop-shadow(0px 0px 5px var(--shadow-active)) grayscale(0);
+  cursor: default !important;
+  letter-spacing: 1px;
 }
 #tabsContiner #videoPlayer {
   background-image: var(--player-video-icon);
 }
+#tabsContiner #videoPlayer.active {
+  background-image: var(--player-video-icon-active);
+}
 #tabsContiner #imagePlayer {
   background-image: var(--player-image-icon);
+}
+#tabsContiner #imagePlayer.active {
+  background-image: var(--player-image-icon-active);
 }
 #tabsContiner #audioPlayer {
   background-image: var(--player-audio-icon);
 }
+#tabsContiner #audioPlayer.active {
+  background-image: var(--player-audio-icon-active);
+}
 #tabsContiner #documentPlayer {
   background-image: var(--player-document-icon);
+}
+#tabsContiner #documentPlayer.active {
+  background-image: var(--player-document-icon-active);
 }
 #statusBar {
   height: 50px;
@@ -193,17 +210,23 @@ input[type="file"] {
   width: 95%;
   margin: 2px 2.5%;
   height: auto;
-  background-color: var(--background);
+  background-color: transparent;
   color: var(--text);
-  border: solid 2px var(--iframe);
+  border: solid 2px var(--border);
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0px 0px 5px var(--shadow), inset 0px 0px 5px var(--shadow);
+  text-shadow: 0px 0px 5px var(--shadow);
+  filter: drop-shadow(0px 0px 5px var(--shadow));
+  letter-spacing: 0;
 }
 .sub-input-file:hover {
-  background-color: var(--header);
-  color: var(--battery-use);
-  border: solid 2px var(--border);
-  box-shadow: 0px 0px 5px var(--border), inset 0px 0px 5px var(--border);
+  background-color: transparent;
+  color: var(--border-effect);
+  border: solid 2px var(--border-effect);
+  box-shadow: 0px 0px 5px var(--shadow-effect), inset 0px 0px 5px var(--shadow-effect);
+  filter: drop-shadow(0px 0px 5px var(--shadow-effect));
+  letter-spacing: 1px !important;
 }
 .uploaded-continer {
   width: 100%;
@@ -220,10 +243,11 @@ input[type="file"] {
   cursor: pointer;
   background-image: var(--menu-button);
   background-size: 100% 100%;
+  filter: drop-shadow(0px 0px 5px var(--shadow));
 }
 .open-menu-button:hover {
   background-image: var(--menu-button-colored);
-  box-shadow: inset 0px 0px 5px var(--shadow-effect), 0px 0px 5px var(--shadow-effect);
+  filter: drop-shadow(0px 0px 5px var(--shadow-effect));
 }
 #menu {
   width: 100%;
@@ -260,7 +284,7 @@ input[type="file"] {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background-color: var(--background);
+  background-color: var(--header);
   background-image: var(--close-icon);
   background-size: 85% 85%;
   background-position: center center;
@@ -268,11 +292,13 @@ input[type="file"] {
   border: solid 2px var(--border);
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px var(--shadow), 0px 0px 5px var(--shadow);
+  filter: drop-shadow(0px 0px 5px var(--shadow));
 }
 .close-windows:hover {
   background-image: var(--close-icon-colored);
   border: solid 2px var(--border-effect);
   box-shadow: inset 0px 0px 5px var(--shadow-effect), 0px 0px 5px var(--shadow-effect);
+  filter: drop-shadow(0px 0px 5px var(--shadow-effect));
 }
 .ivfs {
   top: 40px;
@@ -290,29 +316,34 @@ input[type="file"] {
 }
 select {
   border: 2px solid var(--border);
-  background-color: var(--header);
+  background-color: transparent;
   color: var(--text);
   border-radius: 5px;
   cursor: pointer;
+  filter: drop-shadow(0px 0px 5px var(--shadow));
+  letter-spacing: 0;
 }
 select:hover {
-  background-color: var(--header);
-  color: var(--battery-use);
-  border: solid 2px var(--border);
-  box-shadow: 0px 0px 5px var(--border), inset 0px 0px 5px var(--border);
+  color: var(--border-effect);
+  border: solid 2px var(--border-effect);
+  box-shadow: 0px 0px 5px var(--shadow-effect), inset 0px 0px 5px var(--shadow-effect);
+  filter: drop-shadow(0px 0px 5px var(--shadow-effect));
+  letter-spacing: 1px !important;
 }
 button {
   border: 2px solid var(--border);
-  background-color: var(--header);
+  background-color: transparent;
   color: var(--text);
   border-radius: 5px;
   cursor: pointer;
+  filter: drop-shadow(0px 0px 5px var(--shadow));
+  letter-spacing: 0;
 }
 button:hover {
-  background-color: var(--header);
-  color: var(--battery-use);
-  border: solid 2px var(--border);
-  box-shadow: 0px 0px 5px var(--border), inset 0px 0px 5px var(--border);
+  color: var(--border-effect);
+  border: solid 2px var(--border-effect);
+  box-shadow: 0px 0px 5px var(--shadow-effect), inset 0px 0px 5px var(--shadow-effect);
+  letter-spacing: 1px !important;
 }
 .setting-content {
   width: 100%;
@@ -406,8 +437,8 @@ input[type="checkbox"] {
   border: none;
   background: transparent;
   backdrop-filter: blur(5px);
-  box-shadow: inset 0px 0px 2px var(--text);
-  outline: solid 2px var(--text);
+  box-shadow: inset 0px 0px 2px var(--shadow);
+  outline: solid 2px var(--border);
   color: var(--text);
   overflow: hidden;
   text-align: center;
@@ -417,13 +448,13 @@ input[type="checkbox"] {
   outline: solid 2px var(--border-effect);
   box-shadow: inset 0px 0px 2px var(--shadow-effect);
   filter: drop-shadow(0px 0px 2px var(--shadow-effect));
-  color: var(--shadow-effect) !important;
+  color: var(--border-effect) !important;
 }
 .sub-checkbox.checked {
-  outline: solid 2px var(--shadow-active) !important;
+  outline: solid 2px var(--border-active) !important;
   box-shadow: inset 0px 0px 2px var(--shadow-active) !important;
   filter: drop-shadow(0px 0px 2px var(--shadow-active)) !important;
-  color: var(--shadow-active) !important;
+  color: var(--border-active) !important;
 }
 .sub-checkbox .chox {
   width: 22px;

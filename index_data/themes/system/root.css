@@ -13,6 +13,8 @@
   --shadow-effect: #00C2ffff;
   --shadow-active: #C2ff00ff;
   --border-effect: #00C2ffff;
+  --border-active: #C2ff00ff;
+  --color-false: #f8657eff;
   --audio: #3d3d3dff;
   --iframe: #d3d3d380;
   --sp-logo: url('textures/dark/icon.png');
@@ -20,6 +22,10 @@
   --player-image-icon: url('textures/dark/player_image.png');
   --player-audio-icon: url('textures/dark/player_audio.png');
   --player-document-icon: url('textures/dark/player_document.png');
+  --player-video-icon-active: url('textures/dark/player_video_2.png');
+  --player-image-icon-active: url('textures/dark/player_image_2.png');
+  --player-audio-icon-active: url('textures/dark/player_audio_2.png');
+  --player-document-icon-active: url('textures/dark/player_document_2.png');
   --close-icon: url('textures/dark/close_0.png');
   --close-icon-colored: url('textures/dark/close_1.png');
   --menu-button: url('textures/dark/menu_0.png');
