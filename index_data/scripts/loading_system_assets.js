@@ -12,22 +12,34 @@ const assets = [
   "auds_remove",
   "close_0",
   "close_1",
+  "close_2",
   "docs_remove",
   "icon",
   "imgs_remove",
   "loop_off",
+  "loop_off_2",
   "loop_on",
+  "loop_on_2",
   "menu_0",
   "menu_1",
+  "menu_2",
   "player_audio",
+  "player_audio_2",
   "player_document",
+  "player_document_2",
   "player_image",
+  "player_image_2",
   "player_video",
+  "player_video_2",
   "show_full_screen",
+  "show_full_screen_2",
   "vids_remove",
   "next_off",
+  "next_off_2",
   "next_on",
-  "player_top_btn"
+  "next_on_2",
+  "player_top_btn",
+  "player_top_btn_2"
 ];
 function loadTextures() {
   for(var asset = 0; asset < assets.length; asset++) {
@@ -37,7 +49,7 @@ function loadTextures() {
     casset.style.height = "1px";
     casset.style.opacity = "0";
     casset.addEventListener("load", function() {
-      widthcont = widthcont + 5.263157894736842;
+      widthcont = widthcont + 3.225806451612903;
       loadedcont = loadedcont + 1;
       document.getElementById('widther').style.width = widthcont + "%";
       document.getElementById('widthernum').innerHTML = loadedcont;
