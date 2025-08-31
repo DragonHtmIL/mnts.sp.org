@@ -1,13 +1,8 @@
-let widthcont = 0.0;
 let errorscont = 0;
 let loadedcont = 0;
-
 const png = ".png";
-
 const themeLocation = "index_data/themes/system";
-
 const assetsLocation = "/textures/dark/";
-
 const assets = [
   "auds_remove",
   "close_0",
@@ -41,103 +36,70 @@ const assets = [
   "player_top_btn",
   "player_top_btn_2"
 ];
+const totalAssets = assets.length;
 function loadTextures() {
-  for(var asset = 0; asset < assets.length; asset++) {
+  for (let asset = 0; asset < totalAssets; asset++) {
     const casset = document.createElement('img');
     casset.src = themeLocation + assetsLocation + assets[asset] + png;
-    casset.style.width = "1px";
-    casset.style.height = "1px";
-    casset.style.opacity = "0";
-    casset.addEventListener("load", function() {
-      widthcont = widthcont + 3.225806451612903;
-      loadedcont = loadedcont + 1;
-      document.getElementById('widther').style.width = widthcont + "%";
-      document.getElementById('widthernum').innerHTML = loadedcont;
-      toDisplayBlock();
+    casset.setAttribute('status', 'loading');
+    casset.addEventListener("load", () => {
+      casset.setAttribute('status', 'loaded');
+      loadedcont++;
+      updateProgressBar();
     });
-    casset.addEventListener("error", function() {
+    casset.addEventListener("error", () => {
       errorscont++;
-      if(localStorage.getItem("lang") === "en") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsEn[0] + errorscont + loadingTextsEn[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsEn[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsEn[3];
-      }else
-      if(localStorage.getItem("lang") === "ru") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsRu[0] + errorscont + loadingTextsRu[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsRu[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsRu[3];
-      }else
-      if(localStorage.getItem("lang") === "ja") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsJa[0] + errorscont + loadingTextsJa[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsJa[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsJa[3];
-      }else
-      if(localStorage.getItem("lang") === "chs") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsChs[0] + errorscont + loadingTextsChs[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsChs[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsChs[3];
-      }else
-      if(localStorage.getItem("lang") === "cht") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsCht[0] + errorscont + loadingTextsCht[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsCht[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsCht[3];
-      }else
-      if(localStorage.getItem("lang") === "ko") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsKo[0] + errorscont + loadingTextsKo[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsKo[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsKo[3];
-      }else
-      if(localStorage.getItem("lang") === "he") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsHe[0] + errorscont + loadingTextsHe[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsHe[2];
+      casset.setAttribute('status', 'error');
+      loadedcont++;
+      updateProgressBar();
+      const lang = localStorage.getItem("lang");
+      let texts = loadingTextsEn;
+      if (lang === "ru") {
+        texts = loadingTextsRu;
+      } else if (lang === "he") {
+        texts = loadingTextsHe;
         document.getElementById("errorsOnLoadAssets").style.direction = "rtl";
-        document.getElementById("loadertxt").innerHTML = loadingTextsHe[3];
         document.getElementById("loadertxt").style.direction = "rtl";
-      }else
-      if(localStorage.getItem("lang") === "de") {
-        document.getElementById("errorsOnLoadAssets").innerHTML = loadingTextsDe[0] + errorscont + loadingTextsDe[1];
-        document.getElementById("errorsOnLoadAssets").innerHTML += loadingTextsDe[2];
-        document.getElementById("loadertxt").innerHTML = loadingTextsDe[3];
-      };
+      }
+      document.getElementById("lBtnLang").style.display = "block";
+      document.getElementById("lBtnLang").innerHTML = texts[5];
+      document.getElementById("errorsOnLoadAssets").innerHTML = `${texts[0]}${errorscont}${texts[1]}${texts[2]}`;
+      document.getElementById("loadertxt").innerHTML = texts[3];
       document.getElementById("errorsOnLoadAssets").style.color = "var(--red)";
     });
     document.getElementById("loadedbar").appendChild(casset);
-  };
+  }
+};
+function updateProgressBar() {
+  const progressPercentage = (loadedcont / totalAssets) * 100;
+  const clampedPercentage = Math.min(progressPercentage, 100);
+  document.getElementById('widther').style.width = `${clampedPercentage}%`;
+  document.getElementById('widthernum').innerHTML = loadedcont;
+  if (loadedcont + errorscont === totalAssets) {
+    toDisplayBlock();
+  }
 };
 function toDisplayBlock() {
-  if(document.getElementById('widther').style.width === "100%") {
+  if (loadedcont === totalAssets) {
     document.getElementById("lBtnLang").style.display = "block";
     document.getElementById("loader").style.display = "none";
     document.getElementById("loadertxt").classList.add("stopped");
-    if(localStorage.getItem("lang") === "en") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsEn[4];
-    }else
-    if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsRu[4];
-    }else
-    if(localStorage.getItem("lang") === "ja") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsJa[4];
-    }else
-    if(localStorage.getItem("lang") === "chs") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsChs[4];
-    }else
-    if(localStorage.getItem("lang") === "cht") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsCht[4];
-    }else
-    if(localStorage.getItem("lang") === "ko") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsKo[4];
-    }else
-    if(localStorage.getItem("lang") === "he") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsHe[4];
+    const lang = localStorage.getItem("lang");
+    const languageTexts = {
+      en: loadingTextsEn,
+      ru: loadingTextsRu,
+      he: loadingTextsHe
+    };
+    const texts = languageTexts[lang] || languageTexts.en;
+    document.getElementById("loadertxt").innerHTML = texts[4];
+    if (lang === "he") {
       document.getElementById("loadertxt").style.direction = "rtl";
-    }else
-    if(localStorage.getItem("lang") === "de") {
-      document.getElementById("loadertxt").innerHTML = loadingTextsDe[4];
     }
   }
 };
 function toDisplayNone() {
-  if(document.getElementById('widther').style.width === "100%") {
+  document.getElementById("loadingcontainer").style.opacity = "0";
+  setTimeout(function() {
     document.getElementById("loadingcontainer").style.display = "none";
-  }
+  },1000);
 };
