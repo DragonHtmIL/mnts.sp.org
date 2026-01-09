@@ -17,6 +17,9 @@
   --color-false: #f8657eff;
   --audio: #3d3d3dff;
   --iframe: #d3d3d380;
+  --file-load: #363636aa;
+  --text-color-in: #00C2ffff;
+  --text-color-err: #f8657eff;
   --sp-logo: url('textures/dark/icon.png');
   --player-video-icon: url('textures/dark/player_video.png');
   --player-image-icon: url('textures/dark/player_image.png');

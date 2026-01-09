@@ -72,6 +72,8 @@ audio::-webkit-media-controls-panel {
 .buttons-continer {
   width: 100%;
   height: 30px;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 .remove-button,
 .view-img,
@@ -141,10 +143,10 @@ audio::-webkit-media-controls-panel {
 }
 .i-frame-full {
   position: fixed !important;
-  top: 0;
+  top: 2.5vmax;
   left: 0;
   width: 100% !important;
-  height: 100% !important;
+  height: calc(100% - 48px - 2.5vmax) !important;
   z-index: 8;
   background-color: var(--border) !important;
   transition: 0s;
@@ -161,4 +163,29 @@ audio::-webkit-media-controls-panel {
   position: fixed;
   margin-right: -67px;
   z-index: 9;
+}
+.file-loading-continer {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: calc(100% - 25px);
+  display: flex;
+  background-color: var(--file-load);
+  backdrop-filter: blur(5px);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+.file-loading-text {
+  font-size: 25px;
+  color: var(--text-color-in);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.file-loading-text.errored {
+  font-size: 19px !important;
+  color: var(--text-color-err) !important;
 }

@@ -35,7 +35,7 @@ body {
   height: 2.5vmax;
   display: flex;
   background-color: var(--header);
-  z-index: 1;
+  z-index: 2;
   backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
@@ -77,7 +77,7 @@ body {
   bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  z-index: 1;
+  z-index: 2;
   backdrop-filter: blur(5px);
   border-top: solid 1px var(--border);
   background-color: var(--header);
@@ -152,6 +152,11 @@ body {
   padding-bottom: 50px;
   padding-top: 2.5vmax;
   background-color: var(--background);
+  z-index: 0;
+}
+.player-content.displayed {
+  bottom: 0%;
+  z-index: 1;
 }
 .device-info-indicator {
   position: relative;
@@ -302,7 +307,7 @@ input[type="file"] {
 }
 .ivfs {
   top: 40px;
-  z-index: 1;
+  z-index: 3;
 }
 #menuTitle {
   margin-bottom: 20px;
@@ -372,7 +377,7 @@ button:hover {
   height: 100%;
   display: block;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
   background: var(--background);
   backdrop-filter: blur(0px);
   cursor: pointer;
@@ -462,10 +467,16 @@ input[type="checkbox"] {
   padding: auto;
 }
 .sub-checkbox .chox.false {
-  margin-left: 0px;
+  margin-left: 0%;
 }
 .sub-checkbox .chox.true {
   margin-right: -100%;
+}
+.sub-checkbox.checked .chox.false {
+  margin-left: -100%;
+}
+.sub-checkbox.checked .chox.true {
+  margin-right: 0%;
 }
 .totop-button {
   position: fixed;
@@ -476,7 +487,7 @@ input[type="checkbox"] {
   background-image: var(--to-top-icon);
   background-size: 100% 100%;
   filter: drop-shadow(0px 0px 2px var(--shadow)) grayscale(1);
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 .totop-button:hover {
