@@ -5,11 +5,24 @@
   "scope": "/mnts.sp.org/",
   "start_url": "/mnts.sp.org/",
   "display": "fullscreen",
+  "lang": "en",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "icons": [
     {
       "src": "/mnts.sp.org/index_data/textures/system_logo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "locales": ["en","ru","he"],
+  "ru": {
+    "name": "Проигрыватель хранилища",
+    "short_name": "Проигрыватель хранилища"
+  },
+  "he": {
+    "name": "נגן אחסון",
+    "short_name": "נגן אחסון"
+  }
 }
