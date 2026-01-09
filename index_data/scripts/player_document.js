@@ -14,6 +14,8 @@ document.querySelector("input[name=documentsUploader]").onchange = function(even
     const fsshow = document.createElement('button');
     const btncontiner = document.createElement('div');
     const iffullclose = document.createElement('span');
+    const loading = document.createElement('div');
+    const loadingText = document.createElement('div');
     ifspace.className = "i-frame-full-subspace";
     iframe.alt = file.name;
     iframe.setAttribute("controls", "");
@@ -29,6 +31,8 @@ document.querySelector("input[name=documentsUploader]").onchange = function(even
     span.innerHTML = iframe.alt;
     btncontiner.className = "buttons-continer";
     iffullclose.className = "close-windows ivfs if-full-close";
+    loading.className = "file-loading-continer";
+    loadingText.className = "file-loading-text";
     button.addEventListener('click', () => {
       preview.removeChild(div);
       docCounter = --docCounter;
@@ -59,6 +63,20 @@ document.querySelector("input[name=documentsUploader]").onchange = function(even
     div.appendChild(btncontiner);
     div.appendChild(span);
     preview.appendChild(div);
+    document.addEventListener('error', () => {
+      div.appendChild(loading);
+      loading.appendChild(loadingText);
+      loadingText.className = "file-loading-text errored";
+      if(localStorage.getItem("lang") === "en") {
+        loadingText.innerHTML = "An error occurred..." + "<br>" + "Try with other format for document.";
+      }else
+      if(localStorage.getItem("lang") === "ru") {
+        loadingText.innerHTML = "Произошла ошибка..." + "<br>" + "Попробуйте использовать другой формат документ.";
+      }else
+      if(localStorage.getItem("lang") === "he") {
+        loadingText.innerHTML = "נוצרה שגיאה..." + "<br>" + "נסו פורמט אחר למסמך.";
+      }
+    });
   }
 };
 function clearDocumentUploader() {

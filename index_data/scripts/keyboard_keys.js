@@ -31,59 +31,59 @@ document.onkeydown = function (event) {
   }else
   if (event.keyCode == 13) {
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.bottom === "0%" &&
-    document.getElementById("imageContiner").style.bottom === "-100%" &&
-    document.getElementById("audioContiner").style.bottom === "-100%" &&
-    document.getElementById("documentContiner").style.bottom === "-100%") {
+    document.getElementById("videoContiner").className === "player-content displayed" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.bottom === "-100%" &&
-    document.getElementById("imageContiner").style.bottom === "0%" &&
-    document.getElementById("audioContiner").style.bottom === "-100%" &&
-    document.getElementById("documentContiner").style.bottom === "-100%") {
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content displayed" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.bottom === "-100%" &&
-    document.getElementById("imageContiner").style.bottom === "-100%" &&
-    document.getElementById("audioContiner").style.bottom === "0%" &&
-    document.getElementById("documentContiner").style.bottom === "-100%") {
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content displayed" &&
+    document.getElementById("documentContiner").className === "player-content") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "flex" &&
-    document.getElementById("videoContiner").style.bottom === "-100%" &&
-    document.getElementById("imageContiner").style.bottom === "-100%" &&
-    document.getElementById("audioContiner").style.bottom === "-100%" &&
-    document.getElementById("documentContiner").style.bottom === "0%") {
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content displayed") {
       document.getElementById("lBtnLang").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.bottom === "0%" &&
-    document.getElementById("imageContiner").style.bottom === "-100%" &&
-    document.getElementById("audioContiner").style.bottom === "-100%" &&
-    document.getElementById("documentContiner").style.bottom === "-100%") {
+    document.getElementById("videoContiner").className === "player-content displayed" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
       document.getElementById("inputVideos").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.bottom === "-100%" &&
-    document.getElementById("imageContiner").style.bottom === "0%" &&
-    document.getElementById("audioContiner").style.bottom === "-100%" &&
-    document.getElementById("documentContiner").style.bottom === "-100%") {
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content displayed" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
       document.getElementById("inputImages").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.bottom === "-100%" &&
-    document.getElementById("imageContiner").style.bottom === "-100%" &&
-    document.getElementById("audioContiner").style.bottom === "0%" &&
-    document.getElementById("documentContiner").style.bottom === "-100%") {
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content displayed" &&
+    document.getElementById("documentContiner").className === "player-content") {
       document.getElementById("inputAudios").click();
     }else
     if(document.getElementById("loadingcontainer").style.display === "none" &&
-    document.getElementById("videoContiner").style.bottom === "-100%" &&
-    document.getElementById("imageContiner").style.bottom === "-100%" &&
-    document.getElementById("audioContiner").style.bottom === "-100%" &&
-    document.getElementById("documentContiner").style.bottom === "0%") {
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content displayed") {
       document.getElementById("inputDocuments").click();
     }else{
       console.log("something else have an error...");

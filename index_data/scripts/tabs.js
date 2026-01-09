@@ -1,9 +1,9 @@
 function playerVideo() {
   const content = document.getElementById("videoContiner");
-  document.getElementById("videoContiner").style.bottom = "0%";
-  document.getElementById("imageContiner").style.bottom = "-100%";
-  document.getElementById("audioContiner").style.bottom = "-100%";
-  document.getElementById("documentContiner").style.bottom = "-100%";
+  document.getElementById("videoContiner").classList.add("displayed");
+  document.getElementById("imageContiner").classList.remove("displayed");
+  document.getElementById("audioContiner").classList.remove("displayed");
+  document.getElementById("documentContiner").classList.remove("displayed");
   document.getElementById("videoPlayer").classList = "player-tab videoLang active";
   document.getElementById("imagePlayer").classList = "player-tab imageLang";
   document.getElementById("audioPlayer").classList = "player-tab audioLang";
@@ -19,10 +19,10 @@ function playerVideo() {
 }
 function playerImage() {
   const content = document.getElementById("imageContiner");
-  document.getElementById("videoContiner").style.bottom = "-100%";
-  document.getElementById("imageContiner").style.bottom = "0%";
-  document.getElementById("audioContiner").style.bottom = "-100%";
-  document.getElementById("documentContiner").style.bottom = "-100%";
+  document.getElementById("videoContiner").classList.remove("displayed");
+  document.getElementById("imageContiner").classList.add("displayed");
+  document.getElementById("audioContiner").classList.remove("displayed");
+  document.getElementById("documentContiner").classList.remove("displayed");
   document.getElementById("videoPlayer").classList = "player-tab videoLang";
   document.getElementById("imagePlayer").classList = "player-tab imageLang active";
   document.getElementById("audioPlayer").classList = "player-tab audioLang";
@@ -38,10 +38,10 @@ function playerImage() {
 }
 function playerAudio() {
   const content = document.getElementById("audioContiner");
-  document.getElementById("videoContiner").style.bottom = "-100%";
-  document.getElementById("imageContiner").style.bottom = "-100%";
-  document.getElementById("audioContiner").style.bottom = "0%";
-  document.getElementById("documentContiner").style.bottom = "-100%";
+  document.getElementById("videoContiner").classList.remove("displayed");
+  document.getElementById("imageContiner").classList.remove("displayed");
+  document.getElementById("audioContiner").classList.add("displayed");
+  document.getElementById("documentContiner").classList.remove("displayed");
   document.getElementById("videoPlayer").classList = "player-tab videoLang";
   document.getElementById("imagePlayer").classList = "player-tab imageLang";
   document.getElementById("audioPlayer").classList = "player-tab audioLang active";
@@ -57,10 +57,10 @@ function playerAudio() {
 }
 function playerDocument() {
   const content = document.getElementById("documentContiner");
-  document.getElementById("videoContiner").style.bottom = "-100%";
-  document.getElementById("imageContiner").style.bottom = "-100%";
-  document.getElementById("audioContiner").style.bottom = "-100%";
-  document.getElementById("documentContiner").style.bottom = "0%";
+  document.getElementById("videoContiner").classList.remove("displayed");
+  document.getElementById("imageContiner").classList.remove("displayed");
+  document.getElementById("audioContiner").classList.remove("displayed");
+  document.getElementById("documentContiner").classList.add("displayed");
   document.getElementById("videoPlayer").classList = "player-tab videoLang";
   document.getElementById("imagePlayer").classList = "player-tab imageLang";
   document.getElementById("audioPlayer").classList = "player-tab audioLang";

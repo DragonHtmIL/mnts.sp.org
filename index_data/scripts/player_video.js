@@ -13,6 +13,8 @@ document.querySelector("input[name=videosUploader]").onchange = function(event) 
     const buttonloop = document.createElement('button');
     const autoNextButton = document.createElement('button');
     const btncontiner = document.createElement('div');
+    const loading = document.createElement('div');
+    const loadingText = document.createElement('div');
     video.alt = file.name;
     video.setAttribute("controls", "");
     video.setAttribute("controlsList", "nodownload");
@@ -44,6 +46,8 @@ document.querySelector("input[name=videosUploader]").onchange = function(event) 
     span.style.overflowY = "hidden";
     span.innerHTML = video.alt;
     btncontiner.className = "buttons-continer";
+    loading.className = "file-loading-continer";
+    loadingText.className = "file-loading-text";
     button.addEventListener('click', () => {
       preview.removeChild(div);
       vidCounter = --vidCounter;
@@ -137,6 +141,20 @@ document.querySelector("input[name=videosUploader]").onchange = function(event) 
     div.appendChild(btncontiner);
     div.appendChild(span);
     preview.appendChild(div);
+    video.addEventListener('error', () => {
+      div.appendChild(loading);
+      loading.appendChild(loadingText);
+      loadingText.className = "file-loading-text errored";
+      if(localStorage.getItem("lang") === "en") {
+        loadingText.innerHTML = "An error occurred..." + "<br>" + "Try with other format for video.";
+      }else
+      if(localStorage.getItem("lang") === "ru") {
+        loadingText.innerHTML = "Произошла ошибка..." + "<br>" + "Попробуйте использовать другой формат видео.";
+      }else
+      if(localStorage.getItem("lang") === "he") {
+        loadingText.innerHTML = "נוצרה שגיאה..." + "<br>" + "נסו פורמט אחר לסירטון.";
+      }
+    });
   }
 };
 function clearVideoUploader() {
