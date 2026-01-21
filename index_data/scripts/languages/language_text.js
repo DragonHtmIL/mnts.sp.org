@@ -29,6 +29,7 @@ function loadTexts() {
   const a001_set = document.getElementsByClassName("imageLang");
   const a002_set = document.getElementsByClassName("audioLang");
   const a003_set = document.getElementsByClassName("documentLang");
+  const a004_set = document.getElementsByClassName("to-zip-file");
   if(localStorage.getItem("lang") === "en") {
     a000.innerHTML = "S.P2";
     a001.innerHTML = "Upload Videos";
@@ -57,12 +58,12 @@ function loadTexts() {
       a000_if.innerHTML = "One press for hide interface";
     }else{
       a000_if.innerHTML = "One click for hide interface";
-    }
+    };
     if(navigator.userAgent.match(/mobile/i)) {
       a001_if.innerHTML = "Double press for close";
     }else{
       a001_if.innerHTML = "Double click for close";
-    }
+    };
     /////////////////////////////////Sets/////////////////////////////////
     for (let i = 0; i < a000_set.length; i++) {
       a000_set[i].textContent = "Video";
@@ -75,6 +76,9 @@ function loadTexts() {
     };
     for (let i = 0; i < a003_set.length; i++) {
       a003_set[i].textContent = "Document";
+    };
+    for (let i = 0; i < a004_set.length; i++) {
+      a004_set[i].textContent = "From ZIP file";
     };
   }else
   if(localStorage.getItem("lang") === "ru") {
@@ -105,12 +109,12 @@ function loadTexts() {
       a000_if.innerHTML = "Одна нажатия, чтобы скрытия интерфейс";
     }else{
       a000_if.innerHTML = "Один клик, чтобы скрыть интерфейс";
-    }
+    };
     if(navigator.userAgent.match(/mobile/i)) {
       a001_if.innerHTML = "два Нажмите, чтобы закрыть";
     }else{
       a001_if.innerHTML = "два щелки, чтобы закрыть";
-    }
+    };
     /////////////////////////////////Sets/////////////////////////////////
     for (let i = 0; i < a000_set.length; i++) {
       a000_set[i].textContent = "Видео";
@@ -124,6 +128,9 @@ function loadTexts() {
     for (let i = 0; i < a003_set.length; i++) {
       a003_set[i].textContent = "Документ";
     };
+    for (let i = 0; i < a004_set.length; i++) {
+      a004_set[i].textContent = "Из ZIP файла";
+    }
   }else
   if(localStorage.getItem("lang") === "he") {
     a000.innerHTML = "נ.א2";
@@ -157,12 +164,12 @@ function loadTexts() {
       a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
     }else{
       a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
-    }
+    };
     if(navigator.userAgent.match(/mobile/i)) {
       a001_if.innerHTML = "לחיצה כפולה לסגירה";
     }else{
       a001_if.innerHTML = "לחיצה כפולה לסגירה";
-    }
+    };
     /////////////////////////////////Sets/////////////////////////////////
     for (let i = 0; i < a000_set.length; i++) {
       a000_set[i].textContent = "סרטון";
@@ -175,6 +182,9 @@ function loadTexts() {
     };
     for (let i = 0; i < a003_set.length; i++) {
       a003_set[i].textContent = "מסמך";
+    };
+    for (let i = 0; i < a004_set.length; i++) {
+      a004_set[i].textContent = "מקובץ ZIP";
     };
   }
   document.title = a000.innerHTML;
