@@ -30,6 +30,7 @@ var URLS = [
   `${GHPATH}/index_data/scripts/customed_checkboxes.js`,
   `${GHPATH}/index_data/scripts/reload.js`,
   `${GHPATH}/index_data/scripts/close.js`,
+  `${GHPATH}/index_data/scripts/upload_via_zip.js`,
 
   `${GHPATH}/index_data/scripts/languages`,
   `${GHPATH}/index_data/scripts/languages/for_scripts.js`,
