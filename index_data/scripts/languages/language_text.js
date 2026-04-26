@@ -31,38 +31,38 @@ function loadTexts() {
   const a003_set = document.getElementsByClassName("documentLang");
   const a004_set = document.getElementsByClassName("to-zip-file");
   if(localStorage.getItem("lang") === "en") {
-    a000.innerHTML = "S.P2";
-    a001.innerHTML = "Upload Videos";
-    a002.innerHTML = "Upload Images";
-    a003.innerHTML = "Upload Audios";
-    a004.innerHTML = "Upload Documents";
-    a005.innerHTML = "Settings";
-    a006.innerHTML = "Menu";
-    a007.innerHTML = "LOADING...";
-    a008.innerHTML = "Continue";
-    a009.innerHTML = "Open on start the tab";
-    a010.innerHTML = "Languages";
-    a011.innerHTML = "Apply";
-    a012.innerHTML = "Auto play next Audios and Videos";
-    a013.innerHTML = "Auto next off";
-    a014.innerHTML = "For Video";
-    a015.innerHTML = "For Audio";
-    a016.innerHTML = "For Video and Audio";
-    a017.innerHTML = "Developments";
-    a018.innerHTML = "No";
-    a019.innerHTML = "Yes";
-    a020.innerHTML = "Reload";
-    a021.innerHTML = "Close";
+    if (a000) a000.innerHTML = "S.P2";
+    if (a001) a001.innerHTML = "Upload Videos";
+    if (a002) a002.innerHTML = "Upload Images";
+    if (a003) a003.innerHTML = "Upload Audios";
+    if (a004) a004.innerHTML = "Upload Documents";
+    if (a005) a005.innerHTML = "Settings";
+    if (a006) a006.innerHTML = "Menu";
+    if (a007) a007.innerHTML = "LOADING...";
+    if (a008) a008.innerHTML = "Continue";
+    if (a009) a009.innerHTML = "Open on start the tab";
+    if (a010) a010.innerHTML = "Languages";
+    if (a011) a011.innerHTML = "Apply";
+    if (a012) a012.innerHTML = "Auto play next Audios and Videos";
+    if (a013) a013.innerHTML = "Auto next off";
+    if (a014) a014.innerHTML = "For Video";
+    if (a015) a015.innerHTML = "For Audio";
+    if (a016) a016.innerHTML = "For Video and Audio";
+    if (a017) a017.innerHTML = "Developments";
+    if (a018) a018.innerHTML = "No";
+    if (a019) a019.innerHTML = "Yes";
+    if (a020) a020.innerHTML = "Reload";
+    if (a021) a021.innerHTML = "Close";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
-      a000_if.innerHTML = "One press for hide interface";
+      if (a000_if) a000_if.innerHTML = "One press for hide interface";
     }else{
-      a000_if.innerHTML = "One click for hide interface";
+      if (a000_if) a000_if.innerHTML = "One click for hide interface";
     };
     if(navigator.userAgent.match(/mobile/i)) {
-      a001_if.innerHTML = "Double press for close";
+      if (a001_if) a001_if.innerHTML = "Double press for close";
     }else{
-      a001_if.innerHTML = "Double click for close";
+      if (a001_if) a001_if.innerHTML = "Double click for close";
     };
     /////////////////////////////////Sets/////////////////////////////////
     for (let i = 0; i < a000_set.length; i++) {
@@ -82,38 +82,38 @@ function loadTexts() {
     };
   }else
   if(localStorage.getItem("lang") === "ru") {
-    a000.innerHTML = "П.Х2";
-    a001.innerHTML = "Загрузить видео";
-    a002.innerHTML = "Загрузить изображения";
-    a003.innerHTML = "Загрузить аудио";
-    a004.innerHTML = "Загрузить документы";
-    a005.innerHTML = "Настройки";
-    a006.innerHTML = "Меню";
-    a007.innerHTML = "ЗАГРУЗКА...";
-    a008.innerHTML = "Продолжать";
-    a009.innerHTML = "Открыть при запуске вкладка";
-    a010.innerHTML = "Языки";
-    a011.innerHTML = "Применять";
-    a012.innerHTML = "Автоматическое воспроизведение следующих аудио и видео";
-    a013.innerHTML = "Авто следующий выкл";
-    a014.innerHTML = "Для видео";
-    a015.innerHTML = "Для аудио";
-    a016.innerHTML = "Для видео и аудио";
-    a017.innerHTML = "Разработки";
-    a018.innerHTML = "Нет";
-    a019.innerHTML = "Да";
-    a020.innerHTML = "Перезагрузить";
-    a021.innerHTML = "Закрыть";
+    if (a000) a000.innerHTML = "П.Х2";
+    if (a001) a001.innerHTML = "Загрузить видео";
+    if (a002) a002.innerHTML = "Загрузить изображения";
+    if (a003) a003.innerHTML = "Загрузить аудио";
+    if (a004) a004.innerHTML = "Загрузить документы";
+    if (a005) a005.innerHTML = "Настройки";
+    if (a006) a006.innerHTML = "Меню";
+    if (a007) a007.innerHTML = "ЗАГРУЗКА...";
+    if (a008) a008.innerHTML = "Продолжать";
+    if (a009) a009.innerHTML = "Открыть при запуске вкладка";
+    if (a010) a010.innerHTML = "Языки";
+    if (a011) a011.innerHTML = "Применять";
+    if (a012) a012.innerHTML = "Автоматическое воспроизведение следующих аудио и видео";
+    if (a013) a013.innerHTML = "Авто следующий выкл";
+    if (a014) a014.innerHTML = "Для видео";
+    if (a015) a015.innerHTML = "Для аудио";
+    if (a016) a016.innerHTML = "Для видео и аудио";
+    if (a017) a017.innerHTML = "Разработки";
+    if (a018) a018.innerHTML = "Нет";
+    if (a019) a019.innerHTML = "Да";
+    if (a020) a020.innerHTML = "Перезагрузить";
+    if (a021) a021.innerHTML = "Закрыть";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
-      a000_if.innerHTML = "Одна нажатия, чтобы скрытия интерфейс";
+      if (a000_if) a000_if.innerHTML = "Одна нажатия, чтобы скрытия интерфейс";
     }else{
-      a000_if.innerHTML = "Один клик, чтобы скрыть интерфейс";
+      if (a000_if) a000_if.innerHTML = "Один клик, чтобы скрыть интерфейс";
     };
     if(navigator.userAgent.match(/mobile/i)) {
-      a001_if.innerHTML = "два Нажмите, чтобы закрыть";
+      if (a001_if) a001_if.innerHTML = "два Нажмите, чтобы закрыть";
     }else{
-      a001_if.innerHTML = "два щелки, чтобы закрыть";
+      if (a001_if) a001_if.innerHTML = "два щелки, чтобы закрыть";
     };
     /////////////////////////////////Sets/////////////////////////////////
     for (let i = 0; i < a000_set.length; i++) {
@@ -133,42 +133,45 @@ function loadTexts() {
     }
   }else
   if(localStorage.getItem("lang") === "he") {
-    a000.innerHTML = "נ.א2";
-     a000.style.direction = "rtl";
-    a001.innerHTML = "העלאת סרטונים";
-    a002.innerHTML = "העלאת תמונות";
-    a003.innerHTML = "העלאת שמע";
-    a004.innerHTML = "העלאת מסמכים";
-    a005.innerHTML = "הגדרות";
-    a006.innerHTML = "תפריט";
-    a007.innerHTML = "טעינה...";
-     a007.style.direction = "rtl";
-    a008.innerHTML = "המשך";
-    a009.innerHTML = "פתח בעת הפעלת הכרטיסייה";
-    a010.innerHTML = "שפות";
-    a011.innerHTML = "אישור";
-    a012.innerHTML = "הפעלה אוטומטית של אודיו וסרטונים הבאים";
-    a013.innerHTML = "הבא אוטומטי כבוי";
-    a014.innerHTML = "לסרטון";
-    a015.innerHTML = "לאודיו";
-    a016.innerHTML = "עבור וידאו ואודיו";
-    a017.innerHTML = "התפתחויות";
-     a017.style.width = "100%";
-     a017.style.textAlign = "right";
-    a018.innerHTML = "לא";
-    a019.innerHTML = "כן";
-    a020.innerHTML = "טעינה מחדש";
-    a021.innerHTML = "סגירה";
+    if (a000) a000.innerHTML = "נ.א2";
+     if (a000) a000.style.direction = "rtl";
+    if (a001) a001.innerHTML = "העלאת סרטונים";
+    if (a002) a002.innerHTML = "העלאת תמונות";
+    if (a003) a003.innerHTML = "העלאת שמע";
+    if (a004) a004.innerHTML = "העלאת מסמכים";
+    if (a005) a005.innerHTML = "הגדרות";
+    if (a006) a006.innerHTML = "תפריט";
+    if (a007) a007.innerHTML = "טעינה...";
+     if (a007) a007.style.direction = "rtl";
+    if (a008) a008.innerHTML = "המשך";
+    if (a009) a009.innerHTML = "פתח בעת הפעלת הכרטיסייה";
+     if (a009) a009.style.textAlign = "right";
+    if (a010) a010.innerHTML = "שפות";
+     if (a010) a010.style.textAlign = "right";
+    if (a011) a011.innerHTML = "אישור";
+    if (a012) a012.innerHTML = "הפעלה אוטומטית של אודיו וסרטונים הבאים";
+     if (a012) a012.style.textAlign = "right";
+    if (a013) a013.innerHTML = "הבא אוטומטי כבוי";
+    if (a014) a014.innerHTML = "לסרטון";
+    if (a015) a015.innerHTML = "לאודיו";
+    if (a016) a016.innerHTML = "עבור וידאו ואודיו";
+    if (a017) a017.innerHTML = "התפתחותויות";
+     if (a017) a017.style.width = "100%";
+     if (a017) a017.style.textAlign = "right";
+    if (a018) a018.innerHTML = "לא";
+    if (a019) a019.innerHTML = "כן";
+    if (a020) a020.innerHTML = "טעינה מחדש";
+    if (a021) a021.innerHTML = "סגירה";
     /////////////////////////////////Ifs/////////////////////////////////
     if(navigator.userAgent.match(/mobile/i)) {
-      a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
+      if (a000_if) a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
     }else{
-      a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
+      if (a000_if) a000_if.innerHTML = "לחיצה אחת להסתרת ממשק";
     };
     if(navigator.userAgent.match(/mobile/i)) {
-      a001_if.innerHTML = "לחיצה כפולה לסגירה";
+      if (a001_if) a001_if.innerHTML = "לחיצה כפולה לסגירה";
     }else{
-      a001_if.innerHTML = "לחיצה כפולה לסגירה";
+      if (a001_if) a001_if.innerHTML = "לחיצה כפולה לסגירה";
     };
     /////////////////////////////////Sets/////////////////////////////////
     for (let i = 0; i < a000_set.length; i++) {
@@ -187,5 +190,5 @@ function loadTexts() {
       a004_set[i].textContent = "מקובץ ZIP";
     };
   }
-  document.title = a000.innerHTML;
+  if (a000) document.title = a000.innerHTML;
 }

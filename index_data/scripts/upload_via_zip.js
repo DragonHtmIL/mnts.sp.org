@@ -43,6 +43,10 @@ inputZip.addEventListener("change", async () => {
         document.getElementById("imgName").innerHTML = entry.name;
         showImage(img);
       });
+      blocker.addEventListener('click', function() {
+        document.getElementById("imgName").innerHTML = entry.name;
+        showImage(img);
+      });
       img.ondragstart = function() {return false;};
       document.getElementById("imgsUploaded").innerHTML = imgCounter;
       div.appendChild(img);
