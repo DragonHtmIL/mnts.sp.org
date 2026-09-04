@@ -8,9 +8,10 @@
   <link rel="canonical" href="https://arturvesta.github.io/StoragePlayer/">
   <link rel="manifest" href="" id="manifestTestLoad">
   <link rel="stylesheet" href="index_data/styles/system_loading_style.css">
-  <link rel="stylesheet" id="styleRoot">
-  <link rel="stylesheet" id="styleBase">
-  <link rel="stylesheet" id="styleCreated">
+  <link rel="stylesheet" href="index_data/styles/root.css">
+  <link rel="stylesheet" href="index_data/styles/animations.css">
+  <link rel="stylesheet" href="index_data/styles/style.css">
+  <link rel="stylesheet" href="index_data/styles/style_created.css">
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 </head>
 <body>
@@ -64,14 +65,6 @@
         </select>
       </div>
       <hr>
-      <div class="setting-content" id="adminacces" style="display: none;">
-        <label for="administratorTools" id="adminToolsLang" onclick="customeCheckbox0001();">...</label>
-        <input type="checkbox" id="administratorTools">
-        <div class="sub-checkbox" onclick="customeCheckbox0001();document.getElementById('administratorTools').click();" id="checkboxId0001">
-          <div id="ch0001false" class="chox false">✕</div>
-          <div id="ch0001true" class="chox true">✓</div>
-        </div>
-      </div>
       <div class="setting-content" id="reloadPage">
         <button id="reloadPageBtn" onclick="reload()">...</button>
       </div>
@@ -179,45 +172,14 @@
   <script src="index_data/scripts/settings_prechanges.js"></script>
   <script src="index_data/scripts/apply_settings.js"></script>
   <script src="index_data/scripts/loading_system_assets.js"></script>
-  <script src="index_data/themes/system/style_loader.js" id="themeScript"></script>
   <script src="index_data/scripts/keyboard_keys.js"></script>
-  <script src="index_data/scripts/customed_checkboxes.js"></script>
   <script src="index_data/scripts/reload.js"></script>
   <script src="index_data/scripts/close.js"></script>
   <script src="index_data/scripts/upload_via_zip.js"></script>
-  <script src="index_data/scripts/devices.js"></script>
+  <script src="index_data/scripts/window_click.js"></script>
   <script src="index_data/scripts/window_context.js"></script>
   <script src="index_data/scripts/window_load.js"></script>
   <script src="index_data/scripts/window_scroll.js"></script>
-  <script>
-    if(navigator.serviceWorker) {
-      if(window.location.protocol === 'https:') {
-        navigator.serviceWorker.register('/mnts.sp.org/sw.js',{scope: '/mnts.sp.org/'})
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(error => {
-          return false
-        });
-        document.getElementById("manifestTestLoad").setAttribute('href','/mnts.sp.org/manifest.webmanifest');
-      }else
-      if (window.location.protocol === 'file:') {
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js', { scope: '/' })
-            .then(registration => {
-              console.log('Service Worker registered for local file with scope:', registration.scope);
-            })
-            .catch(error => {
-              return false
-            });
-            document.getElementById("manifestTestLoad").setAttribute('href','./manifest.webmanifest');
-        } else {
-          console.log('Service workers are not supported in this environment.');
-        }
-      } else {
-        console.log('Service workers are not being registered on non-HTTPS or non-file protocols.');
-      }
-    }
-  </script>
+  <script src="sw_loader.js"></script>
 </body>
 </html>

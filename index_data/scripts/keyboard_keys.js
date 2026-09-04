@@ -1,0 +1,82 @@
+document.onkeydown = function (event) {
+  event = (event || window.event);
+  if (event.keyCode == 27) {
+    if(document.getElementById('menu').style.right === '0%') {
+      document.getElementById('closeMenu').click();
+    }else{
+      document.getElementById('openMenu').click();
+    }
+  }else
+  if (event.keyCode == 49) {
+    document.getElementById('videoPlayer').click();
+  }else
+  if (event.keyCode == 50) {
+    document.getElementById('imagePlayer').click();
+  }else
+  if (event.keyCode == 51) {
+    document.getElementById('audioPlayer').click();
+  }else
+  if (event.keyCode == 52) {
+    document.getElementById('documentPlayer').click();
+  }else
+  if (event.keyCode == 13) {
+    if(document.getElementById("loadingcontainer").style.display === "flex" &&
+    document.getElementById("videoContiner").className === "player-content displayed" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
+      document.getElementById("lBtnLang").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "flex" &&
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content displayed" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
+      document.getElementById("lBtnLang").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "flex" &&
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content displayed" &&
+    document.getElementById("documentContiner").className === "player-content") {
+      document.getElementById("lBtnLang").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "flex" &&
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content displayed") {
+      document.getElementById("lBtnLang").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "none" &&
+    document.getElementById("videoContiner").className === "player-content displayed" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
+      document.getElementById("inputVideos").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "none" &&
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content displayed" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content") {
+      document.getElementById("inputImages").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "none" &&
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content displayed" &&
+    document.getElementById("documentContiner").className === "player-content") {
+      document.getElementById("inputAudios").click();
+    }else
+    if(document.getElementById("loadingcontainer").style.display === "none" &&
+    document.getElementById("videoContiner").className === "player-content" &&
+    document.getElementById("imageContiner").className === "player-content" &&
+    document.getElementById("audioContiner").className === "player-content" &&
+    document.getElementById("documentContiner").className === "player-content displayed") {
+      document.getElementById("inputDocuments").click();
+    }else{
+      console.log("something else have an error...");
+    }
+  }
+};

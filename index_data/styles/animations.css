@@ -1,0 +1,35 @@
+
+@-webkit-keyframes clckeffect {
+  0% {background-image: var(--animation-image-0);}
+  6% {background-image: var(--animation-image-1);}
+  12% {background-image: var(--animation-image-2);}
+  18% {background-image: var(--animation-image-3);}
+  24% {background-image: var(--animation-image-4);}
+  30% {background-image: var(--animation-image-5);}
+  36% {background-image: var(--animation-image-6);}
+  42% {background-image: var(--animation-image-7);}
+  48% {background-image: var(--animation-image-8);}
+  54% {background-image: var(--animation-image-9);}
+  60% {background-image: var(--animation-image-10);}
+  66% {background-image: var(--animation-image-11);}
+  72% {background-image: var(--animation-image-12);}
+  78% {background-image: var(--animation-image-13);}
+  100% {background-image: var(--animation-image-14);}
+}
+@keyframes clckeffect {
+  0% {background-image: var(--animation-image-0);}
+  6% {background-image: var(--animation-image-1);}
+  12% {background-image: var(--animation-image-2);}
+  18% {background-image: var(--animation-image-3);}
+  24% {background-image: var(--animation-image-4);}
+  30% {background-image: var(--animation-image-5);}
+  36% {background-image: var(--animation-image-6);}
+  42% {background-image: var(--animation-image-7);}
+  48% {background-image: var(--animation-image-8);}
+  54% {background-image: var(--animation-image-9);}
+  60% {background-image: var(--animation-image-10);}
+  66% {background-image: var(--animation-image-11);}
+  72% {background-image: var(--animation-image-12);}
+  78% {background-image: var(--animation-image-13);}
+  100% {background-image: var(--animation-image-14);}
+}
